@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :judge %><br />
-    <%= f.select :judge, Judge::JUDGES %>
+    <%= f.select :judge, Judge::JUDGES, prompt: "select judge" %>
   </div>
   <div class="field">
     <%= f.label :cause %><br />
-    <%= f.select :cause, Cause::CAUSES %>
+    <%= f.select :cause, Cause::CAUSES, prompt: "select cause" %>
   </div>
   <div class="field">
     <%= f.label :case_number %><br />
