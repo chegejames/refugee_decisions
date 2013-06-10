@@ -40,8 +40,7 @@ ActiveRecord::Schema.define(:version => 20130603184220) do
   end
 
   create_table "judges", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.date     "date_of_training"
     t.boolean  "trained"
     t.datetime "created_at",       :null => false

@@ -19,7 +19,7 @@
 
 <% @cases.each do |cases| %>
   <tr>
-    <td><%= cases.judge.first_name + " " + cases.judge.last_name %></td>
+    <td><%= cases.judge.name%></td>
     <td><%= cases.cause.name + " - " + cases.cause.category%></td>
     <td><%= cases.case_number %></td>
     <td><%= cases.summary_of_decision %></td>

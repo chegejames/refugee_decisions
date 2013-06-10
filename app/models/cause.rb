@@ -3,8 +3,6 @@ class Cause < ActiveRecord::Base
   has_many :cases
 
   CATEGORIES = ["civil", "criminal"]
-  CAUSES = Array.new
-  Cause.all.each{|x| CAUSES << [x.name+" ( "+x.category+" )", x.id]}
 
   validates :category, :description, :name, presence: true
 end

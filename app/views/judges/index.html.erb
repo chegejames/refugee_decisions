@@ -2,8 +2,7 @@
 
 <table>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>Name</th>
     <th>Date of training</th>
     <th>Trained</th>
     <th></th>
@@ -13,8 +12,7 @@
 
 <% @judges.each do |judge| %>
   <tr>
-    <td><%= judge.first_name %></td>
-    <td><%= judge.last_name %></td>
+    <td><%= judge.name %></td>
     <td><%= judge.date_of_training %></td>
     <td><%= judge.trained %></td>
     <td><%= link_to 'Show', judge %></td>

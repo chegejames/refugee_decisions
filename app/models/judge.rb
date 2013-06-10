@@ -1,13 +1,8 @@
 class Judge < ActiveRecord::Base
-  attr_accessible :date_of_training, :first_name, :last_name, :trained
+  attr_accessible :date_of_training, :name, :trained
   has_many  :cases
 
-  JUDGES = Array.new
-  begin
-    Judge.all.each do | judge |
-      JUDGES << [judge.first_name + " " + judge.last_name, judge.id]
-    end
-  end
-  validates :first_name, :last_name, presence: true
+  validates :name, presence: true
+  JUDGES = Judge.all.map{|judge| [judge.name, judge.id]}
 
 end

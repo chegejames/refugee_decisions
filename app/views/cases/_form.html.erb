@@ -13,11 +13,12 @@
 
   <div class="field">
     <%= f.label :judge %><br />
-    <%= f.select :judge, Judge::JUDGES, prompt: "select judge" %>
+    <%= f.select :judge, options_from_collection_for_select(Judge.all, :id, :name)%>
   </div>
   <div class="field">
     <%= f.label :cause %><br />
-    <%= f.select :cause, Cause::CAUSES, prompt: "select cause" %>
+    <%causes = Cause.all.map{|cause| [cause.name+" - "+cause.category, cause.id]}%>
+    <%= f.select :cause, options_for_select(causes)%>
   </div>
   <div class="field">
     <%= f.label :case_number %><br />
@@ -35,6 +36,7 @@
     <%= f.label :court %><br />
     <%= f.text_field :court %>
   </div>
+  <section id = "parties">
   <section id = "civil">
   <div class="field">
     <%= f.label :complainant %><br />
@@ -55,6 +57,7 @@
     <%= f.label :accused %><br />
     <%= f.text_area :accused %>
   </div>
+  </section>
   </section>
   <div class="actions">
     <%= f.submit %>
