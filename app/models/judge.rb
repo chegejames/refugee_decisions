@@ -3,9 +3,10 @@ class Judge < ActiveRecord::Base
   has_many  :cases
 
   JUDGES = Array.new
-
-  Judge.all.each do | judge |
-    JUDGES.append [judge.first_name + " " + judge.last_name, judge.id]
+  begin
+    Judge.all.each do | judge |
+      JUDGES << [judge.first_name + " " + judge.last_name, judge.id]
+    end
   end
   validates :first_name, :last_name, presence: true
 
