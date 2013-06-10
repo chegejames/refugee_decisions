@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Judge:</b>
+  <%= @case.judge %>
+</p>
+
+<p>
+  <b>Cause:</b>
+  <%= @case.cause %>
+</p>
+
+<p>
+  <b>Case number:</b>
+  <%= @case.case_number %>
+</p>
+
+<p>
+  <b>Summary of decision:</b>
+  <%= @case.summary_of_decision %>
+</p>
+
+<p>
+  <b>Year of judgement:</b>
+  <%= @case.year_of_judgement %>
+</p>
+
+<p>
+  <b>Court:</b>
+  <%= @case.court %>
+</p>
+
+<p>
+  <b>Complainant:</b>
+  <%= @case.complainant %>
+</p>
+
+<p>
+  <b>Defendant:</b>
+  <%= @case.defendant %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @case.state %>
+</p>
+
+<p>
+  <b>Accused:</b>
+  <%= @case.accused %>
+</p>
+
+
+<%= link_to 'Edit', edit_case_path(@case) %> |
+<%= link_to 'Back', cases_path %>

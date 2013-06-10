@@ -1,0 +1,8 @@
+class Judge < ActiveRecord::Base
+  attr_accessible :date_of_training, :first_name, :last_name, :trained
+  JUDGES = []
+
+  Judge.all.each{|x|JUDGES << [x.first_name + " " + x.last_name, x.id]}
+  validates :first_name, :last_name, presence: true
+  has_many  :cases
+end
