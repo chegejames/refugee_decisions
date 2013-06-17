@@ -22,7 +22,7 @@
     <td><%= cases.judge.name%></td>
     <td><%= cases.cause.name + " - " + cases.cause.category%></td>
     <td><%= cases.case_number %></td>
-    <td><%= cases.summary_of_decision %></td>
+    <td><%= cases.summary_of_decision.html_safe %></td>
     <td><%= cases.year_of_judgement %></td>
     <td><%= cases.court %></td>
     <td><%= cases.complainant %></td>

@@ -1,4 +1,6 @@
 Unhcrkmja::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   match "home" =>  "pages#home"
 
   get "pages/about_us"
