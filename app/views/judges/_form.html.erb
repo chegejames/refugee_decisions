@@ -16,14 +16,7 @@
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :date_of_training %><br />
-    <%= f.date_select :date_of_training, :prompt => {year: "year", month: "month", day: "day"} %>
-  </div>
-  <div class="field">
-    <%= f.label :trained %><br />
-    <%= f.check_box :trained %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,0 +1,24 @@
+<h1><%= @judge.name%>: trainings</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Remarks</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trainings.each do |training| %>
+  <tr>
+    <td><%= training.date %></td>
+    <td><%= training.remarks %></td>
+    <td><%= link_to 'Show', [@judge, training] %></td>
+    <td><%= link_to 'Destroy', [@judge, training], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Training', new_judge_training_path(@judge) %>

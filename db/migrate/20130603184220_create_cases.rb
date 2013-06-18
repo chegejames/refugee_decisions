@@ -11,6 +11,7 @@ class CreateCases < ActiveRecord::Migration
       t.text :defendant
       t.text :state
       t.text :accused
+      t.attachment :pdf
 
       t.timestamps
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603184220) do
+ActiveRecord::Schema.define(:version => 20130618034342) do
 
   create_table "cases", :force => true do |t|
     t.integer  "judge_id"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(:version => 20130603184220) do
     t.text     "defendant"
     t.text     "state"
     t.text     "accused"
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end
@@ -39,12 +43,34 @@ ActiveRecord::Schema.define(:version => 20130603184220) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "ckeditor_assets", :force => true do |t|
+    t.string   "data_file_name",                  :null => false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    :limit => 30
+    t.string   "type",              :limit => 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
+
   create_table "judges", :force => true do |t|
     t.string   "name"
-    t.date     "date_of_training"
-    t.boolean  "trained"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "trainings", :force => true do |t|
+    t.integer  "judge_id"
+    t.date     "date"
+    t.string   "remarks"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -1,4 +1,7 @@
 Unhcrkmja::Application.routes.draw do
+
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   match "home" =>  "pages#home"
@@ -10,7 +13,9 @@ Unhcrkmja::Application.routes.draw do
   resources :cases
 
 
-  resources :judges
+  resources :judges do
+     resources :trainings
+  end
 
 
   resources :causes

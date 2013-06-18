@@ -32,12 +32,12 @@
 <% if @case.cause.category == "civil"%>
 <p>
   <b>Complainant:</b>
-  <%= @case.complainant %>
+  <%= @case.complainant.html_safe %>
 </p>
 
 <p>
   <b>Defendant:</b>
-  <%= @case.defendant %>
+  <%= @case.defendant.html_safe %>
 </p>
 
 <%else%>
@@ -52,6 +52,9 @@
   <%= @case.accused %>
 </p>
 <%end%>
-
+<p>
+  <b>PDF:<b>
+  <%= link_to "download full judgement", @case.pdf.url%>
+</p>
 <%= link_to 'Edit', edit_case_path(@case) %> |
 <%= link_to 'Back', cases_path %>

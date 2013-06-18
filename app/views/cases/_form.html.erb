@@ -40,12 +40,12 @@
   <section id = "civil">
   <div class="field">
     <%= f.label :complainant %><br />
-    <%= f.text_area :complainant%>
+    <%= f.cktext_area :complainant%>
   </div>
 
   <div class="field">
     <%= f.label :defendant %><br />
-    <%= f.text_area :defendant%>
+    <%= f.cktext_area :defendant%>
   </div>
   </section>
   <section id="criminal">
@@ -59,6 +59,9 @@
   </div>
   </section>
   </section>
+  <div class="field">
+    <%= f.file_field :pdf%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

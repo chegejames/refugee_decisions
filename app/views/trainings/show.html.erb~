@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>References:</b>
+  <%= @training.references %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @training.date %>
+</p>
+
+<p>
+  <b>Remarks:</b>
+  <%= @training.remarks %>
+</p>
+
+
+<%= link_to 'Edit', edit_training_path(@training) %> |
+<%= link_to 'Back', trainings_path %>

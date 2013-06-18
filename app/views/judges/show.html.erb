@@ -5,16 +5,6 @@
   <%= @judge.name %>
 </p>
 
-<p>
-  <b>Date of training:</b>
-  <%= @judge.date_of_training %>
-</p>
-
-<p>
-  <b>Trained:</b>
-  <%= @judge.trained %>
-</p>
-
-
+<%= link_to 'trainings', judge_trainings_path(@judge)%>
 <%= link_to 'Edit', edit_judge_path(@judge) %> |
 <%= link_to 'Back', judges_path %>
