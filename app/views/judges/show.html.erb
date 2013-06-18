@@ -5,6 +5,10 @@
   <%= @judge.name %>
 </p>
 
-<%= link_to 'trainings', judge_trainings_path(@judge)%>
-<%= link_to 'Edit', edit_judge_path(@judge) %> |
-<%= link_to 'Back', judges_path %>
+<%= link_to 'view trainings', judge_trainings_path(@judge), class: "btn btn-primary"%>
+<%= link_to "add a training", new_judge_training_path(@judge), class: "btn btn-primary"%>
+<br />
+<br />
+<%= link_to 'Edit', edit_judge_path(@judge), class: "btn" %> |
+<%= link_to 'Back', judges_path, class: "btn" %>
+

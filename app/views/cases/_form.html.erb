@@ -11,16 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :judge %><br />
+ <div class="field">
+    <%= f.label :judge%><br />
     <%= f.select :judge, options_from_collection_for_select(Judge.all, :id, :name)%>
-  </div>
-  <div class="field">
+ </div>
+ <div class="field">
     <%= f.label :cause %><br />
     <%causes = Cause.all.map{|cause| [cause.name+" - "+cause.category, cause.id]}%>
     <%= f.select :cause, options_for_select(causes)%>
-  </div>
-  <div class="field">
+ </div>
+ <div class="field">
     <%= f.label :case_number %><br />
     <%= f.text_field :case_number %>
   </div>
@@ -42,7 +42,6 @@
     <%= f.label :complainant %><br />
     <%= f.cktext_area :complainant%>
   </div>
-
   <div class="field">
     <%= f.label :defendant %><br />
     <%= f.cktext_area :defendant%>
@@ -63,7 +62,8 @@
     <%= f.label :upload_full_decision%></br>
     <%= f.file_field :pdf%>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <div class="actions">
+    <%= f.submit class: "btn btn-primary"%>
+    </div>
 <% end %>

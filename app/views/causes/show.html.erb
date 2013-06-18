@@ -7,7 +7,7 @@
 
 <p>
   <b>Description:</b>
-  <%= @cause.description %>
+  <%= @cause.description.html_safe %>
 </p>
 
 <p>
@@ -16,5 +16,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_cause_path(@cause) %> |
-<%= link_to 'Back', causes_path %>
+<%= link_to 'Edit', edit_cause_path(@cause), class: "btn" %> |
+<%= link_to 'Back', causes_path, class: "btn" %>

@@ -1,6 +1,6 @@
 <h1>Listing causes</h1>
 
-<table>
+<table class="table table-striped table-bordered table-hover table-condensed">
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -15,13 +15,13 @@
     <td><%= cause.name %></td>
     <td><%= cause.description %></td>
     <td><%= cause.category %></td>
-    <td><%= link_to 'Show', cause %></td>
-    <td><%= link_to 'Edit', edit_cause_path(cause) %></td>
-    <td><%= link_to 'Destroy', cause, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', cause, class: "btn btn-mini btn-info" %></td>
+    <td><%= link_to 'Edit', edit_cause_path(cause), class: "btn btn-mini btn-warning" %></td>
+    <td><%= link_to 'Destroy', cause, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger"%></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Cause', new_cause_path %>
+

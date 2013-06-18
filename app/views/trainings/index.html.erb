@@ -1,6 +1,6 @@
 <h1><%= @judge.name%>: trainings</h1>
 
-<table>
+<table class="table table-striped table-bordered table-hover table-condensed">
   <tr>
     <th>Date</th>
     <th>Remarks</th>
@@ -13,12 +13,13 @@
   <tr>
     <td><%= training.date %></td>
     <td><%= training.remarks %></td>
-    <td><%= link_to 'Show', [@judge, training] %></td>
-    <td><%= link_to 'Destroy', [@judge, training], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', [@judge, training], class: "btn btn-mini btn-info"%></td>
+    <td><%= link_to "Edit", edit_judge_training_path(@judge, training), class: "btn btn-mini btn-warning"%>
+    <td><%= link_to 'Destroy', [@judge, training], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Training', new_judge_training_path(@judge) %>
+<%= link_to "Back", @judge, class: "btn"%>

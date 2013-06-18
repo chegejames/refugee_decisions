@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Case number:</b>
+  <%= @case.case_number %>
+</p>
+
+<p>
   <b>Judge:</b>
   <%= @case.judge.name%>
 </p>
@@ -8,11 +13,6 @@
 <p>
   <b>Cause:</b>
   <%= link_to @case.cause.name, @case.cause%>
-</p>
-
-<p>
-  <b>Case number:</b>
-  <%= @case.case_number %>
 </p>
 
 <p>
@@ -56,5 +56,5 @@
   <b>PDF:<b>
   <%= link_to "download full judgement", @case.pdf.url%>
 </p>
-<%= link_to 'Edit', edit_case_path(@case) %> |
-<%= link_to 'Back', cases_path %>
+<%= link_to 'Edit', edit_case_path(@case), class: "btn" %> |
+<%= link_to 'Back', cases_path, class: "btn"%>
