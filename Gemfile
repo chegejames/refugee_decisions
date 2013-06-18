@@ -39,4 +39,10 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "ckeditor"
+
 gem "paperclip"
+
+gem 'will_paginate'
+
+gem 'bootstrap-sass'
+
