@@ -46,3 +46,5 @@ gem 'will_paginate'
 
 gem 'bootstrap-sass'
 
+
+gem 'unicorn'
