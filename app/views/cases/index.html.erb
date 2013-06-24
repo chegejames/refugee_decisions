@@ -1,40 +1,22 @@
-<h1>Listing cases</h1>
-
-<table>
-  <tr>
-    <th>Judge</th>
-    <th>Cause</th>
-    <th>Case number</th>
-    <th>Summary of decision</th>
-    <th>Year of judgement</th>
-    <th>Court</th>
-    <th>Complainant</th>
-    <th>Defendant</th>
-    <th>State</th>
-    <th>Accused</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h3>Decision matters on refugees</h3>
 
 <% @cases.each do |cases| %>
-  <tr>
-    <td><%= cases.judge.name%></td>
-    <td><%= cases.cause.name + " - " + cases.cause.category%></td>
-    <td><%= cases.case_number %></td>
-    <td><%= cases.summary_of_decision.html_safe %></td>
-    <td><%= cases.year_of_judgement %></td>
-    <td><%= cases.court %></td>
-    <td><%= cases.complainant %></td>
-    <td><%= cases.defendant %></td>
-    <td><%= cases.state %></td>
-    <td><%= cases.accused %></td>
-    <td><%= link_to 'Show', cases %></td>
-    <td><%= link_to 'Edit', edit_case_path(cases) %></td>
-    <td><%= link_to 'Destroy', cases, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <article class="hero-unit" id="case-index">
+    <% if cases.cause.category == "criminal"%>
+     <p class="parties"><%= cases.state.upcase %> v. <%= cases.accused.upcase %></p>
+    <%else%>
+     <p class="parties"><%= cases.complainant.upcase.html_safe %> v. <%= cases.defendant.upcase.html_safe %></p>
+    <%end%>
+    <p><span>Judge:</span> <%= cases.judge.name%></p>
+    <p><span>Cause:</span> <%= cases.cause.name + " - " + cases.cause.category%></p>
+    <p><span>Case Number:</span> <%= cases.case_number %></p>
+    <p><span>Delivery Date:</span> <%= cases.year_of_judgement %></p>
+    <p><span>Court:</span> <%= cases.court %></p>
+    <p><%= truncate(cases.summary_of_decision, length: 200).html_safe %></p>
+    <p><%= link_to 'Read more', cases, class: "btn-small btn-primary pull-right" %></p>
+  </article>
 <% end %>
-</table>
+
 
 <br />
 

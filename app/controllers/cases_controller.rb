@@ -63,7 +63,7 @@ class CasesController < ApplicationController
     @case = Case.find(params[:id])
 
     respond_to do |format|
-      if @case.update_attributes(params[:case])
+      if @case.update_attributes(params[:case].except(:judge, :cause))
         format.html { redirect_to @case, notice: 'Case was successfully updated.' }
         format.json { head :no_content }
       else
