@@ -1,25 +1,10 @@
 <p id="notice"><%= notice %></p>
 <section class="hero-unit">
-<p>
-  <b>Case number:</b>
-  <%= @case.case_number %>
-</p>
-
-<p>
-  <b>Judge:</b>
-  <%= @case.judge.name%>
-</p>
-
-<p>
-  <b>Cause:</b>
-  <%= link_to @case.cause.name, @case.cause%>
-</p>
-
-<p>
-  <b>Summary of decision:</b>
-  <%= @case.summary_of_decision.html_safe %>
-</p>
-
+<% if @case.cause.category == "criminal"%>
+     <p class="parties"><%= @case.state.upcase %> v. <%= @case.accused.upcase %></p>
+    <%else%>
+     <p class="parties"><%= @case.complainant.upcase.html_safe %> v. <%= @case.defendant.upcase.html_safe %></p>
+<%end%>
 <p>
   <b>Year of judgement:</b>
   <%= @case.year_of_judgement %>
@@ -45,13 +30,29 @@
   <b>State:</b>
   <%= @case.state %>
 </p>
-
-
 <p>
   <b>Accused:</b>
   <%= @case.accused %>
 </p>
 <%end%>
+<p>
+  <b>Case number:</b>
+  <%= @case.case_number %>
+</p>
+
+<p>
+  <b>Judge:</b>
+  <%= @case.judge.name%>
+</p>
+
+<p>
+  <b>Cause:</b>
+  <%= link_to @case.cause.name, @case.cause%>
+</p>
+
+<p>
+  <%= @case.summary_of_decision.html_safe %>
+</p>
 <p>
   <b>PDF:<b>
   <%= link_to "download full judgement", @case.pdf.url%>
