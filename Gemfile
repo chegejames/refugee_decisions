@@ -48,3 +48,5 @@ gem 'bootstrap-sass'
 
 
 gem 'unicorn'
+
+gem 'ransack'
