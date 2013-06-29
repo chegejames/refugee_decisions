@@ -10,10 +10,10 @@
   <%= f.text_field :case_number_cont, placeholder: "Case number"%>
   </div>
   <div class="field">
-    <%= f.date_select :year_of_judgement_eq, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year'}, class: "date"%>
-  </div>
-  <div class="field">
     <%= f.text_field :court_cont, placeholder: "Court"%>
+  </div>
+   <div class="field">
+  <%= f.text_field :year_of_judgement_eq, id: "datepicker"%>
   </div>
   <div class="field">
   <%= f.text_field :complainant_cont, placeholder: "Complainant"%>
@@ -29,4 +29,5 @@
 
   <%= link_to "clear", cases_path, class: "btn btn-warning btn-block"%>
   </div>
+
 <%end%>

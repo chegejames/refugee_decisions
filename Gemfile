@@ -23,6 +23,7 @@ end
 
 gem 'jquery-rails'
 
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -42,11 +43,13 @@ gem "ckeditor"
 
 gem "paperclip"
 
-gem 'will_paginate'
-
 gem 'bootstrap-sass'
 
+gem 'bootstrap-will_paginate'
 
 gem 'unicorn'
 
 gem 'ransack'
+
+gem 'bootstrap-datepicker-rails'
+

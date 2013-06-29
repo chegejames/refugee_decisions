@@ -29,8 +29,12 @@ GEM
       i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.2)
+    bootstrap-datepicker-rails (1.1.1.1)
+      railties (>= 3.0)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.9)
+      will_paginate
     builder (3.0.4)
     ckeditor (4.0.4)
       mime-types
@@ -132,7 +136,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datepicker-rails
   bootstrap-sass
+  bootstrap-will_paginate
   ckeditor
   coffee-rails (~> 3.2.1)
   jquery-rails
@@ -143,4 +149,3 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   unicorn
-  will_paginate
