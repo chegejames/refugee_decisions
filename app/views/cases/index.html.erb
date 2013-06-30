@@ -1,4 +1,3 @@
-<h3>Decision matters on refugees</h3>
 <div class="row-fluid">
 <div class="span3">
 <%= render "search"%>
@@ -19,8 +18,8 @@
     <p><span>Delivery Date:</span> <%= cases.year_of_judgement %></p>
     <p><span>Court:</span> <%= cases.court %></p>
     <p><%= truncate(cases.summary_of_decision, length: 200).html_safe %></p>
-    <p class="pull-right"><%= link_to 'Read more', cases, class: "btn btn-primary" %> <%= link_to "Edit", edit_case_path(cases), class: "btn btn-warning" %>
-    <%= link_to 'Destroy', cases, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%></p>
+    <p class="pull-right"> <%= link_to "Edit", edit_case_path(cases), class: "btn btn-warning" %>
+    <%= link_to 'Destroy', cases, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%> <%= link_to 'Read more', cases, class: "btn btn-primary" %></p>
   </article>
 <% end %>
 

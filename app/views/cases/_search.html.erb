@@ -1,30 +1,32 @@
-<h3> Search for a case</h3>
+<ul class="nav nav-list">
+        <li class="nav-header"><h4>Search for a case</h4></li>
+</ul>
 <%= search_form_for @search, html: {class: "form-horizontal"} do |f| %>
   <div class="field">
   <%= f.text_field :judge_name_cont, placeholder: "Judge's name"%>
   </div>
   <div class="field">
-  <%= f.text_field :cause_name_cont, placeholder: "Cause"%>
+  <%= f.select :cause_name_cont, Cause::CAUSES, prompt: "select Cause"%>
   </div>
  <div class="field">
   <%= f.text_field :case_number_cont, placeholder: "Case number"%>
   </div>
   <div class="field">
-    <%= f.text_field :court_cont, placeholder: "Court"%>
+    <%= f.select :court_cont, Cause::COURTS, prompt: "select Court"%>
   </div>
    <div class="field">
-  <%= f.text_field :year_of_judgement_eq, id: "datepicker"%>
+  <%= f.text_field :year_of_judgement_eq, id: "datepicker", placeholder: "Date"%>
   </div>
   <div class="field">
-  <%= f.text_field :complainant_cont, placeholder: "Complainant"%>
+  <%= f.text_field :complainant_cont, placeholder: "Complainant for criminal"%>
   </div>
   <div class="field">
-  <%= f.text_field :defendant_cont, placeholder: "Defendant"%>
+  <%= f.text_field :defendant_cont, placeholder: "Defendant for civil"%>
   </div>
   <div class="field">
-  <%= f.text_field :accused_cont, placeholder: "Accused"%>
+  <%= f.text_field :accused_cont, placeholder: "Accused for civil"%>
   </div>
-  <div class="action">
+  <div class="action search_buttons">
   <%= f.submit class: "btn btn-primary btn-block"%>
 
   <%= link_to "clear", cases_path, class: "btn btn-warning btn-block"%>
