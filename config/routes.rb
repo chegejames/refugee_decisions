@@ -11,7 +11,11 @@ Unhcrkmja::Application.routes.draw do
 
   match "about_us" =>  "pages#about_us"
 
+  match "programmes" => "pages#programmes"
+
   match "contact_us" =>  "pages#contact_us"
+
+  match "reports" => "pages#reports"
 
   resources :cases
 

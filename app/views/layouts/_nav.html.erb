@@ -1,8 +1,20 @@
 <div class="navbar navbar-inverse">
+  <div class="row-fluid toplogos">
+   <div class="span2">
+   <a href="http://www.unhcr.org" target="_blank"><%= image_tag "unhcr2.jpeg"%></a>
+   </div>
+   <div class="span8">
+   <h1> DECISIONS ON REFUGEE MATTERS</h1>
+   </div>
+   <div class="span2">
+   <a href="http://www.kmja.or.ke" target="_blank"><%= image_tag "kmja.gif"%></a>
+   </div>
+  </div>
   <div class="navbar-inner">
   <ul class="nav">
     <li><%= link_to "Home", home_path%></li>
     <li><%= link_to "About Us", about_us_path%></li>
+    <li><%= link_to "Programmes", programmes_path%></li>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
         Judges <b class="caret"></b>
