@@ -54,3 +54,5 @@ gem 'ransack'
 gem 'bootstrap-datepicker-rails'
 
 gem 'social-share-button'
+
+gem 'mobile-fu'
