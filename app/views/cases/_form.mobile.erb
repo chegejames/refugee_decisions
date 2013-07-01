@@ -1,0 +1,69 @@
+<%= form_for(@case) do |f| %>
+  <% if @case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
+
+      <ul>
+      <% @case.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label :judge%><br />
+    <%= f.select :judge, options_from_collection_for_select(Judge.all, :id, :name)%>
+ </div>
+ <div class="field">
+    <%= f.label :cause %><br />
+    <%causes = Cause.all.map{|cause| [cause.name+" - "+cause.category, cause.id]}%>
+    <%= f.select :cause, options_for_select(causes)%>
+ </div>
+ <div class="field">
+    <%= f.label :case_number %><br />
+    <%= f.text_field :case_number %>
+  </div>
+  <div class="field">
+    <%= f.label :summary_of_decision %><br />
+    <%= f.cktext_area :summary_of_decision %>
+  </div>
+  <div class="field">
+    <%= f.label :year_of_judgement %><br />
+    <%= f.date_select :year_of_judgement %>
+  </div>
+  <div class="field">
+    <%= f.label :court %><br />
+    <%= f.text_field :court %>
+  </div>
+  <section id = "parties">
+  <section id = "civil">
+  <div class="field">
+    <%= f.label :complainant %><br />
+    <%= f.text_area :complainant%>
+  </div>
+  <div class="field">
+    <%= f.label :defendant %><br />
+    <%= f.text_area :defendant%>
+  </div>
+  </section>
+  <section id="criminal">
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_area :state%>
+  </div>
+  <div class="field">
+    <%= f.label :accused %><br />
+    <%= f.text_area :accused%>
+  </div>
+  </section>
+  </section>
+  <div class="field">
+    <%= f.label :upload_full_decision%></br>
+    <%= f.file_field :pdf%>
+  </div>
+
+    <div class="actions">
+    <%= f.submit class: "btn btn-primary"%>
+    </div>
+<% end %>

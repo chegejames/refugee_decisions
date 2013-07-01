@@ -1,4 +1,4 @@
-<div data-role="page" data-theme="c">
+<div data-role="page" data-theme="c" rel="external">
 	<div data-role="header">
 		<% if @case.cause.category == "criminal"%>
 		  <h1><%= @case.state.upcase %> vs. <%= @case.accused.upcase %></h1>
@@ -8,7 +8,26 @@
 		<%= render "/layouts/nav"%>
 	</div>
 	<div data-role="content">
-
+       <p>
+       	<table>
+          <tr>
+          <td><strong>Judge: </strong><%= @case.judge.name%></td>
+          </tr>
+          <tr>
+          <td><strong>Cause: </strong><%= @case.cause.name + " - " + @case.cause.category%></td>
+          </tr>
+          <tr><td><strong>Case Number: </strong><%= @case.case_number %></td></tr>
+          <tr><td><strong>Delivery Date: </strong><%= @case.year_of_judgement %></td></tr>
+          <tr><td><strong>Court: </strong><%= @case.court %></td></tr>
+          </table>
+       	</p>
+       	<p>
+       		<em>Decision summary</em>
+       		<%= @case.summary_of_decision.html_safe %>
+       	</p>
+       	<p>
+          <%= link_to "download full judgement", @case.pdf.url%>
+        </p>
 	</div>
 	<%= render "/layouts/footer"%>
 </div>

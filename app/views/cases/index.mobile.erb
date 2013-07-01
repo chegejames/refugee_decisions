@@ -1,19 +1,47 @@
-<div data-role="page" data-theme="c">
+<div data-role="page" data-theme="c" id="page1">
+  <div data-role="header">
+    <h1>Cases</h1>
+    <%= render "/layouts/nav"%>
+  </div>
+  <div data-role="content">
+  	  <a href="#search_form" data-theme="c" data-inline="true" data-transition="pop" data-role="button" data-icon="search">seach form</a>
+      <% @cases.each do |cases| %>
+        <div data-role="collapsible" data-content-theme="d">
+        <% if cases.cause.category == "criminal"%>
+          <h1><%= "#{cases.state.upcase} vs. #{cases.accused.upcase}"%></h1>
+        <%else%>
+          <h1><%= "#{cases.complainant.upcase}  VS. #{cases.defendant.upcase}"%></h1>
+        <%end%>
+        <p>
+          <table>
+          <tr>
+          <td><strong>Judge: </strong><%= cases.judge.name%></td>
+          </tr>
+          <tr>
+          <td><strong>Cause: </strong><%= cases.cause.name + " - " + cases.cause.category%></td>
+          </tr>
+          <tr><td><strong>Case Number: </strong><%= cases.case_number %></td></tr>
+          <tr><td><strong>Delivery Date: </strong><%= cases.year_of_judgement %></td></tr>
+          <tr><td><strong>Court: </strong><%= cases.court %></td></tr>
+          </table>
+
+          <%= truncate(cases.summary_of_decision, length: 100).html_safe %>
+          <%= link_to "read more", cases, data: {role:"button", inline: true, icon: "forward", iconpos: "right"}%>
+        </p>
+        </div>
+        <%end%>
+        <%= will_paginate @cases%>
+  </div>
+  <%= render "/layouts/footer"%>
+</div>
+
+<div data-role="dialog" id="search_form" data-theme="c">
 	<div data-role="header">
-		<h1>Cases</h1>
-		<%= render "/layouts/nav"%>
+		<h1>Search for a case</h1>
 	</div>
 	<div data-role="content">
-		<ul data-role="listview">
-			<ul data-role="listview" data-theme="d">
-			<% @cases.each do |cases| %>
-				<% if cases.cause.category == "criminal"%>
-				  <li><%= link_to "#{cases.state.upcase} vs. #{cases.accused.upcase}", cases %></li>
-				<%else%>
-				  <li><%= link_to "#{cases.complainant.upcase}  VS. #{cases.defendant.upcase}", cases%></li>
-				<%end%>
-		    <%end%>
-		</ul>
+		<%= render "search"%>
 	</div>
-	<%= render "/layouts/footer"%>
+	
 </div>
+

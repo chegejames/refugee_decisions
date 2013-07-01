@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+<section class="hero-unit">
+<% if @case.cause.category == "criminal"%>
+     <p class="parties"><%= @case.state.upcase %> vs. <%= @case.accused.upcase %></p>
+     <% content_for :title do%>
+       <%= @case.state.upcase %> vs. <%= @case.accused.upcase %>
+     <%end%>
+    <%else%>
+     <p class="parties"><%= @case.complainant.upcase.html_safe %> vs. <%= @case.defendant.upcase.html_safe %></p>
+     <% content_for :title do%>
+       <%= @case.complainant.upcase.html_safe %> vs. <%= @case.defendant.upcase.html_safe %>
+     <%end%>
+<%end%>
+     <%= social_share_button_tag(@case.cause, title: "kkkkkkkkkkkkkkkkkkkk") %>
+<p>
+  <b>Year of judgement:</b>
+  <%= @case.year_of_judgement %>
+</p>
+
+<p>
+  <b>Court:</b>
+  <%= @case.court %>
+</p>
+<% if @case.cause.category == "civil"%>
+<p>
+  <b>Complainant:</b>
+  <%= @case.complainant.html_safe %>
+</p>
+
+<p>
+  <b>Defendant:</b>
+  <%= @case.defendant.html_safe %>
+</p>
+
+<%else%>
+<p>
+  <b>State:</b>
+  <%= @case.state %>
+</p>
+<p>
+  <b>Accused:</b>
+  <%= @case.accused %>
+</p>
+<%end%>
+<p>
+  <b>Case number:</b>
+  <%= @case.case_number %>
+</p>
+
+<p>
+  <b>Judge:</b>
+  <%= @case.judge.name%>
+</p>
+
+<p>
+  <b>Cause:</b>
+  <%= link_to @case.cause.name, @case.cause%>
+</p>
+
+<p>
+  <%= @case.summary_of_decision.html_safe %>
+</p>
+<p>
+  <%= link_to "download full judgement", @case.pdf.url%>
+</p>
+<%= link_to 'Edit', edit_case_path(@case), class: "btn" %> |
+<%= link_to 'Back', cases_path, class: "btn"%>
+</section>

@@ -1,0 +1,34 @@
+<div id="search_form">
+<%= search_form_for @search, html: {class: "form-horizontal"} do |f| %>
+  <div class="field">
+  <%= f.text_field :judge_name_cont, placeholder: "Judge's name"%>
+  </div>
+  <div class="field">
+  <%= f.select :cause_name_cont, Cause::CAUSES, prompt: "select Cause"%>
+  </div>
+ <div class="field">
+  <%= f.text_field :case_number_cont, placeholder: "Case number"%>
+  </div>
+  <div class="field">
+    <%= f.select :court_cont, Cause::COURTS, prompt: "select Court"%>
+  </div>
+   <div class="field">
+  <%= f.text_field :year_of_judgement_eq, id: "datepicker", placeholder: "Date"%>
+  </div>
+  <div class="field">
+  <%= f.text_field :complainant_cont, placeholder: "Complainant for criminal"%>
+  </div>
+  <div class="field">
+  <%= f.text_field :defendant_cont, placeholder: "Defendant for civil"%>
+  </div>
+  <div class="field">
+  <%= f.text_field :accused_cont, placeholder: "Accused for civil"%>
+  </div>
+  <div class="action search_buttons">
+  <%= f.submit data:{role: "button"}%>
+
+  <%= link_to "clear", cases_path, data: {role: "button"}%>
+  </div>
+
+<%end%>
+</div>

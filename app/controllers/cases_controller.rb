@@ -3,7 +3,7 @@ class CasesController < ApplicationController
   # GET /cases.json
   def index
     @search = Case.search(params[:q])
-    @cases = @search.result.paginate(:page => params[:page], :per_page => 5).order("id ASC")
+    @cases = @search.result.paginate(:page => params[:page], :per_page => 10).order("id ASC")
 
     respond_to do |format|
       format.html # index.html.erb

@@ -16,4 +16,6 @@
 //= require bootstrap
 //= require bootstrap-datepicker
 //= require social-share-button
+//= require vendor
 //= require_tree .
+
