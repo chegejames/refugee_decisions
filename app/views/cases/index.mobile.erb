@@ -1,0 +1,19 @@
+<div data-role="page" data-theme="c">
+	<div data-role="header">
+		<h1>Cases</h1>
+		<%= render "/layouts/nav"%>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<ul data-role="listview" data-theme="d">
+			<% @cases.each do |cases| %>
+				<% if cases.cause.category == "criminal"%>
+				  <li><%= link_to "#{cases.state.upcase} vs. #{cases.accused.upcase}", cases %></li>
+				<%else%>
+				  <li><%= link_to "#{cases.complainant.upcase}  VS. #{cases.defendant.upcase}", cases%></li>
+				<%end%>
+		    <%end%>
+		</ul>
+	</div>
+	<%= render "/layouts/footer"%>
+</div>

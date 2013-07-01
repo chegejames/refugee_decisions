@@ -1,0 +1,14 @@
+<div data-role="page" data-theme="c">
+	<div data-role="header">
+		<% if @case.cause.category == "criminal"%>
+		  <h1><%= @case.state.upcase %> vs. <%= @case.accused.upcase %></h1>
+		<%else%>
+		  <h1><%= @case.complainant.upcase.html_safe %> vs. <%= @case.defendant.upcase.html_safe %></h1>
+		<%end%>
+		<%= render "/layouts/nav"%>
+	</div>
+	<div data-role="content">
+
+	</div>
+	<%= render "/layouts/footer"%>
+</div>
