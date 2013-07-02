@@ -7,6 +7,7 @@ class CasesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.mobile
       format.json { render json: @cases }
     end
   end
@@ -18,6 +19,7 @@ class CasesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
+      format.mobile
       format.json { render json: @case }
     end
   end
