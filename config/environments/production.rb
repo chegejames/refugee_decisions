@@ -46,7 +46,7 @@ Unhcrkmja::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( jquery.mobile-1.3.1.min.css )
+  config.assets.precompile += %w( jquery.mobile-1.3.1/jquery.mobile-1.3.1.min.css )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
