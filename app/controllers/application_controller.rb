@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter set_request_format
+  before_filter :set_request_format
 
   def set_request_format
     if is_mobile_devise?
