@@ -1,66 +1,63 @@
 <div class="navbar navbar-inverse">
-	<div class="row-fluid toplogos">
-		<div class="span3 kmja-logo">
-			<a href="http://www.kmja.or.ke" target="_blank" title="The kenya magistrates and judges association"><%= image_tag "logo.png"%></a>
-		</div>
-		<div class="span6 title">
-			<h2>Court Decisions On Refugee Issues</h2>
-		</div>
-		<div class="span3">
+  <div class="row-fluid toplogos">
+    <div class="span3" id="kmja_logo">
+      <a href="http://www.kmja.or.ke" target="_blank" title="The kenya magistrates and judges association"><%= image_tag "logo.png"%></a>
+    </div>
+    <div class="span6 title">
+      <h2>Court Decisions On Refugee Issues</h2>
+    </div>
+    <div class="span3">
 
-			<a href="http://www.unhcr.org" target="_blank" title="UNHCR"><%= image_tag "unhcr_logo.gif"%></a>
-		</div>
-	</div>
-	<div class="navbar-inner">
-		<ul class="nav">
-			<li>
-				<%= link_to "Home", home_path%>
-			</li>
-			<li>
-				<%= link_to "About Us", about_us_path%>
-			</li>
-			<li>
-				<%= link_to "The Programme", programmes_path%>
-			</li>
-			<li>
-				<%= link_to "Partners", partners_path%>
-			</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Judges <b class="caret"></b> </a>
-				<ul class="dropdown-menu">
-					<li>
-						<%= link_to "View Judges", judges_path%>
-					</li>
-					<li>
-						<%= link_to "Add a Judge", new_judge_path%>
-					</li>
-				</ul>
-			</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Causes <b class="caret"></b> </a>
-				<ul class="dropdown-menu">
-					<li>
-						<%= link_to "View Causes", causes_path%>
-					</li>
-					<li>
-						<%= link_to "Add a Cause", new_cause_path%>
-					</li>
-				</ul>
-			</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Cases <b class="caret"></b> </a>
-				<ul class="dropdown-menu">
-					<li>
-						<%= link_to "View Cases", cases_path%>
-					</li>
-					<li>
-						<%= link_to "Add a Case", new_case_path%>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<%= link_to "Contact Us", new_contact_path%>
-			</li>
-			</nav>
-	</div>
+      <a href="http://www.unhcr.org" target="_blank" title="UNHCR"><%= image_tag "unhcr_logo.gif"%></a>
+    </div>
+  </div>
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li>
+        <%= link_to "Home", home_path%>
+      </li>
+      <li>
+        <%= link_to "About Us", about_us_path%>
+      </li>
+      <li>
+        <%= link_to "The Programme", programmes_path%>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Judges <b class="caret"></b> </a>
+        <ul class="dropdown-menu">
+          <li>
+            <%= link_to "View Judges", judges_path%>
+          </li>
+          <li>
+            <%= link_to "Add a Judge", new_judge_path%>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Causes <b class="caret"></b> </a>
+        <ul class="dropdown-menu">
+          <li>
+            <%= link_to "View Causes", causes_path%>
+          </li>
+          <li>
+            <%= link_to "Add a Cause", new_cause_path%>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Cases <b class="caret"></b> </a>
+        <ul class="dropdown-menu">
+          <li>
+            <%= link_to "View Cases", cases_path%>
+          </li>
+          <li>
+            <%= link_to "Add a Case", new_case_path%>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <%= link_to "Contact Us", new_contact_path%>
+      </li>
+      </nav>
+  </div>
 </div>

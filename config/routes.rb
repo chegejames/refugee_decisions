@@ -17,8 +17,6 @@ Unhcrkmja::Application.routes.draw do
 
   match "reports" => "pages#reports"
 
-  match "partners" => "pages#partners"
-
   resources :cases
 
 

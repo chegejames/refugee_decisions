@@ -5,7 +5,23 @@
 #parties textarea{
   height: 35px;
 }
-
+.content{
+  p{
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  line-height: 140%;
+  text-indent: 2em;
+  &:first-letter{
+    font-weight: bold;
+    font-size: 1.4em;
+}
+}
+  ol{
+  font-size: 1.2em;
+  line-height: 140%;
+  padding: 2px;
+  }
+}
 .hero-unit{
   padding-top: 0.2px;
   padding-bottom: 40px;
@@ -13,16 +29,29 @@
     text-align: center;
     border-radius: 6px;
   }
+  figure{
+    img{
+      padding: 5px;
+      border: 1px solid black;
+      background: white;
+      box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    }
+    figcaption{
+      
+    }
+  }
 }
 
 .search_buttons{
   width: 75%;
 }
 
-.kmja_logo{
-  background: red;
-  img{
-    padding: 50px;
+//nav bar
+.navbar{
+  #kmja_logo{
+    img{
+      float: right;
+    }
   }
 }
 
