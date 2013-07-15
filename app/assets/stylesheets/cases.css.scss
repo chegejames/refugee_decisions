@@ -2,19 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap';
+#logos{
+  margin-bottom: none;
+  background: #132530;
+  #kmja_logo{
+    img{
+      float: right;
+    }
+  }
+  h2{
+    text-align: center;
+    color: white;
+  }
+}
+
 #main_nav{
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-right: 10%;
-  margin-left: 10%;
-  border-bottom: 4px solid #82BB0D;
+  background: #132530;
   ul{
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-bottom: 10px;
     list-style-type: none;
-    margin-left: 25%;
     li{
     display: inline;
     a{
-      color: #82BB0D;
+      font-family: Verdana,Geneva,sans-serif;
+      padding: 10px;
+      color: rgb(252, 249, 215);
       &:hover{
         color: #EAB410;
         text-decoration: none;
@@ -24,74 +38,82 @@
   }
 }
 #main-content{
-  margin-left: 10%;
-  margin-right: 10%;
-#parties textarea{
-  height: 35px;
-}
-
- aside{
-   border-left: 1px dashed #82BB0D;
-   .nav-header{
-     h4{
-     color:#82BB0D;
-     }
+    margin-left: 10%;
+    margin-right: 10%;
+    #parties textarea{
+      height: 35px;
+       }
+    #cases{
+     padding: 20px;
+      .case{
+        padding: 30px;
+        border-bottom: 1px inset #132530;
+        h4{
+          text-align: center;
+        }
+        p{
+          span{
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    #search{
+      margin-top: 50px;
+         padding: 5px;
+         border-radius: 5px;
+         box-shadow:  1px 1px 1px 1px #132530;
+         #case_search{
+      input, select{
+        margin-bottom: 10px;
+      }
+      .search_buttons{
+        width: 100%;
+      }
+    }
+       }
+  
+  #myCarousel{
+    img{
+      width: 100%;
+    }
+  }
+  aside{
+    border-left: 1px dashed #82BB0D;
+    .nav-header{
+      h4{
+        color:#82BB0D;
+        }
      h4{
        color: #EAB410;
+       }
      }
-   }
- }
-.content{
-  p{
-  font-size: 1.2em;
-  letter-spacing: .05em;
-  line-height: 140%;
-}
-  ul{
-  font-size: 1.2em;
-  line-height: 140%;
-  padding: 2px;
-  li{
-    padding: 2px;
-  }
-  }
-}
-.hero-unit{
-  padding-top: 0.2px;
-  padding-bottom: 40px;
-  h4{
-    text-align: center;
-    border-radius: 6px;
-    color: #0044CC;
-  }
-  h2{
-    text-align: center;
-  }
-  figure{
-    img{
-      padding: 5px;
-      border: 1px solid black;
-      background: white;
-      box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+     }
+     .content{
+       #about_us{
+         margin-bottom: 50px;
+       }
+       #partners{
+       }
+       h2{
+         text-align: center;
+       }
+       h4{
+         text-align: left;
+       }
+       p{
+         font-size: 1.2em;
+         letter-spacing: .05em;
+         line-height: 140%;
+         }
+         ul{
+           font-size: 1.2em;
+           line-height: 140%;
+           padding: 2px;
+           li{
+             padding: 2px;
+             }
+          }
     }
-    figcaption{
-      
-    }
-  }
-}
-
-.search_buttons{
-  width: 75%;
-}
-}
-#logos{
-  background: #EAB410;
-#kmja_logo{
-    img{
-      float: right;
-    }
-  }
-  h2{
-    text-align: center;
-  }
+    
 }

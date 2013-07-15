@@ -1,10 +1,10 @@
 <div class="row-fluid">
-<div class="span3">
+<div class="span3" id="search">
 <%= render "search"%>
 </div>
-<div class="span9">
+<div class="span9" id="cases">
 <% @cases.each do |cases| %>
-  <article class="hero-unit">
+  <article class="case">
     <% if cases.cause.category == "criminal"%>
      <h4><%= cases.state %> vs. <%= cases.accused %></h4>
     <%else%>
