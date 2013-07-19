@@ -63,8 +63,8 @@ camp2.jpg: camp2-0ef860763fd240d1640f61f43aab3d8b.jpg
 camp2/index.jpg: camp2-0ef860763fd240d1640f61f43aab3d8b.jpg
 camps.jpg: camps-11463cd81e11cd88e30cd1bad44d49a4.jpg
 camps/index.jpg: camps-11463cd81e11cd88e30cd1bad44d49a4.jpg
-dpt.jpg: dpt-a874ccfb42dddf54b8c3441e475e37f5.jpg
-dpt/index.jpg: dpt-a874ccfb42dddf54b8c3441e475e37f5.jpg
+dpt.png: dpt-7514bc35169e166e814236417f64cca7.png
+dpt/index.png: dpt-7514bc35169e166e814236417f64cca7.png
 eastleigh-nairobi.jpg: eastleigh-nairobi-69fbf2f8bd5682cc2f127615911acb47.jpg
 eastleigh-nairobi/index.jpg: eastleigh-nairobi-69fbf2f8bd5682cc2f127615911acb47.jpg
 eisch.jpg: eisch-2b08783b9a36cbad17dff630aff08b5d.jpg
@@ -83,18 +83,12 @@ image3.jpeg: image3-91a714fd62e9af548dd531636271aa19.jpeg
 image3/index.jpeg: image3-91a714fd62e9af548dd531636271aa19.jpeg
 image4.jpeg: image4-980fa1b4fb00b4833c4ba997ccc2d98d.jpeg
 image4/index.jpeg: image4-980fa1b4fb00b4833c4ba997ccc2d98d.jpeg
-image5.jpg: image5-9e04a90402c25509eb19ee5fe76696b6.jpg
-image5/index.jpg: image5-9e04a90402c25509eb19ee5fe76696b6.jpg
-image6.jpg: image6-f3c6e682ee4380a204d6263cf2933020.jpg
-image6/index.jpg: image6-f3c6e682ee4380a204d6263cf2933020.jpg
-image7.jpg: image7-4e2af6d45171168660ae350ac5fa803e.jpg
-image7/index.jpg: image7-4e2af6d45171168660ae350ac5fa803e.jpg
 images.jpg: images-f50d56e8227cf56bf5d9e6724f5a577c.jpg
 images/index.jpg: images-f50d56e8227cf56bf5d9e6724f5a577c.jpg
-jti.png: jti-311f12ae43991577342c89c93aa55a2e.png
-jti/index.png: jti-311f12ae43991577342c89c93aa55a2e.png
-judiciary.gif: judiciary-9d46633551b9dfa369e0efbff8668b7b.gif
-judiciary/index.gif: judiciary-9d46633551b9dfa369e0efbff8668b7b.gif
+jti_logo.png: jti_logo-198f0603d3996e08267e0f0657fac043.png
+jti_logo/index.png: jti_logo-198f0603d3996e08267e0f0657fac043.png
+judiciary.gif: judiciary-03b03b6d0b6cc36bb5c52e31027a214f.gif
+judiciary/index.gif: judiciary-03b03b6d0b6cc36bb5c52e31027a214f.gif
 judiciary.png: judiciary-98469bd4504417736038ef411e00e00e.png
 judiciary/index.png: judiciary-98469bd4504417736038ef411e00e00e.png
 judiciary1.png: judiciary1-a566cab8a58b93f0be76435dbccb7651.png
@@ -111,56 +105,34 @@ kenyan flag.jpg: kenyan flag-e1da11c881504ddc6a609ca6ec42e366.jpg
 kenyan flag/index.jpg: kenyan flag-e1da11c881504ddc6a609ca6ec42e366.jpg
 kids.jpg: kids-35d233c01862323f1567807bfba1ab25.jpg
 kids/index.jpg: kids-35d233c01862323f1567807bfba1ab25.jpg
-kituo cha sheria.jpg: kituo cha sheria-63ec029222d2db1532e4469d19a6a926.jpg
-kituo cha sheria/index.jpg: kituo cha sheria-63ec029222d2db1532e4469d19a6a926.jpg
-kituo.jpg: kituo-daf5afcff7aeff6cc07370b26de6d67b.jpg
-kituo/index.jpg: kituo-daf5afcff7aeff6cc07370b26de6d67b.jpg
-kmja.gif: kmja-a84393873d8d9b744283249da93cc610.gif
-kmja/index.gif: kmja-a84393873d8d9b744283249da93cc610.gif
-kmja.jpg: kmja-e69b2d44ec8c3debb6a58ed080bdbfa0.jpg
-kmja/index.jpg: kmja-e69b2d44ec8c3debb6a58ed080bdbfa0.jpg
-kmja.png: kmja-fc92bb5df547c1cb5f4122cec192b223.png
-kmja/index.png: kmja-fc92bb5df547c1cb5f4122cec192b223.png
-logo.gif: logo-a84393873d8d9b744283249da93cc610.gif
-logo/index.gif: logo-a84393873d8d9b744283249da93cc610.gif
-logo.png: logo-fc92bb5df547c1cb5f4122cec192b223.png
-logo/index.png: logo-fc92bb5df547c1cb5f4122cec192b223.png
+kituo cha sheria.jpg: kituo cha sheria-ef34396c24e7093fe4700d8327b6da22.jpg
+kituo cha sheria/index.jpg: kituo cha sheria-ef34396c24e7093fe4700d8327b6da22.jpg
+kmja_log.png: kmja_log-2c5b1936d5a7776da2f81ded11d0e2f5.png
+kmja_log/index.png: kmja_log-2c5b1936d5a7776da2f81ded11d0e2f5.png
 pdf.png: pdf-7938c554bd867edef9b64d2854398996.png
 pdf/index.png: pdf-7938c554bd867edef9b64d2854398996.png
 pic.jpg: pic-6ad7fc60d754ea194f6136bf5395c410.jpg
 pic/index.jpg: pic-6ad7fc60d754ea194f6136bf5395c410.jpg
-rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 ref.jpg: ref-9d33acb2d835309409f7d7361dd6d572.jpg
 ref/index.jpg: ref-9d33acb2d835309409f7d7361dd6d572.jpg
 refs.jpg: refs-f345be3fbdec7ce0d8458b2a4c597b7d.jpg
 refs/index.jpg: refs-f345be3fbdec7ce0d8458b2a4c597b7d.jpg
 refugee camps.jpg: refugee camps-cdf70608345ded33ffaf037025bee4a3.jpg
 refugee camps/index.jpg: refugee camps-cdf70608345ded33ffaf037025bee4a3.jpg
-refugee consortium of kenya.png: refugee consortium of kenya-86d1e4a6c9881c10a9e2acd4fddda027.png
-refugee consortium of kenya/index.png: refugee consortium of kenya-86d1e4a6c9881c10a9e2acd4fddda027.png
-unhcr.jpeg: unhcr-da70f4445cd35a21d2f1f50b9bfb2d80.jpeg
-unhcr/index.jpeg: unhcr-da70f4445cd35a21d2f1f50b9bfb2d80.jpeg
-unhcr.jpg: unhcr-8c5934d4118610a0668851ba43f3a78a.jpg
-unhcr/index.jpg: unhcr-8c5934d4118610a0668851ba43f3a78a.jpg
+refugee consortium of kenya.png: refugee consortium of kenya-20f994ff383d20564d30f91f53614fcc.png
+refugee consortium of kenya/index.png: refugee consortium of kenya-20f994ff383d20564d30f91f53614fcc.png
 unhcr1.jpeg: unhcr1-f97d7e2a5491db9a36078479fdea4ccf.jpeg
 unhcr1/index.jpeg: unhcr1-f97d7e2a5491db9a36078479fdea4ccf.jpeg
-unhcr2.jpeg: unhcr2-12a5cb4cfb3cc486dd1e59c2fa7c179c.jpeg
-unhcr2/index.jpeg: unhcr2-12a5cb4cfb3cc486dd1e59c2fa7c179c.jpeg
-unhcr3.jpeg: unhcr3-db11a15eb920e1bc820bf4db90e3432f.jpeg
-unhcr3/index.jpeg: unhcr3-db11a15eb920e1bc820bf4db90e3432f.jpeg
-unhcr4.jpeg: unhcr4-6cdbb5a156193783aefc677d7ba8f0f9.jpeg
-unhcr4/index.jpeg: unhcr4-6cdbb5a156193783aefc677d7ba8f0f9.jpeg
-unhcr_logo.gif: unhcr_logo-bb9d05d49162219170243cb79ef5995e.gif
-unhcr_logo/index.gif: unhcr_logo-bb9d05d49162219170243cb79ef5995e.gif
+unhcr_logo.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
+unhcr_logo/index.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
 urban refugee.jpg: urban refugee-2a6b67847f19d38e5b05fb92db3c4288.jpg
 urban refugee/index.jpg: urban refugee-2a6b67847f19d38e5b05fb92db3c4288.jpg
 women.jpg: women-ec97abd349401ff6544d8ad9531562e9.jpg
 women/index.jpg: women-ec97abd349401ff6544d8ad9531562e9.jpg
-application.js: application-761b854c52ec97d86d47555f9ab94d65.js
-application/index.js: application-761b854c52ec97d86d47555f9ab94d65.js
-application.css: application-c741d016edc3961abf535b240a3e4513.css
-application/index.css: application-c741d016edc3961abf535b240a3e4513.css
+application.js: application-d63b65794c908adb75413398fccb9fa2.js
+application/index.js: application-d63b65794c908adb75413398fccb9fa2.js
+application.css: application-d6591d3ea029ec8317b33094ec46f74f.css
+application/index.css: application-d6591d3ea029ec8317b33094ec46f74f.css
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd/index.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-sd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-sd-0d589aa7db0edb179d5118ea3490b07d.png

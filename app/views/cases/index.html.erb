@@ -1,3 +1,4 @@
+<h3>The Judgements</h3>
 <div class="row-fluid">
 <div class="span3" id="search">
 <%= render "search"%>
@@ -6,9 +7,9 @@
 <% @cases.each do |cases| %>
   <article class="case">
     <% if cases.cause.category == "criminal"%>
-     <h4><%= cases.state %> vs. <%= cases.accused %></h4>
+     <h3><%= cases.state %> vs. <%= cases.accused %></h3>
     <%else%>
-     <h4><%= cases.complainant %> v. <%= cases.defendant %></h4>
+     <h3><%= cases.complainant %> vs. <%= cases.defendant %></h3>
     <%end%>
     <article class="row-fluid">
     <p class="span4"><span>Case Number:</span> <%= cases.case_number %></p>
