@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ -> 
-     $('#gallery a').data({'colorboxWidth': '100px;'})
+     $('#gallery a')
      $('#datepicker').datepicker()
      $('.dropdown-toggle').dropdown()
      $('#civil, #criminal').hide()
