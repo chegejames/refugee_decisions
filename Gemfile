@@ -22,6 +22,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'colorbox-rails'
 
 
 # To use ActiveModel has_secure_password

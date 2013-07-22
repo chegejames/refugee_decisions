@@ -50,6 +50,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    colorbox-rails (0.0.16)
+      jquery-rails
+      rails (>= 3.1.1)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -59,6 +62,9 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (4.0.3)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.8.0)
     kgio (2.8.0)
     mail (2.5.4)
@@ -147,7 +153,9 @@ DEPENDENCIES
   bootstrap-will_paginate
   ckeditor
   coffee-rails (~> 3.2.1)
+  colorbox-rails
   jquery-rails
+  jquery-ui-rails
   mobile-fu
   paperclip
   pg

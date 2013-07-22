@@ -10,11 +10,12 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
+//= require jquery.min
 //= require jquery_ujs
+//= require jquery.ui.datepicker
+//= require colorbox-rails
 //= require ckeditor/init
 //= require bootstrap
-//= require bootstrap-datepicker
 //= require social-share-button
 //= require vendor
 //= require_tree .
