@@ -97,6 +97,8 @@
 9/index.jpg: 9-9513b59d2c945a7158de3711d0d4e72b.jpg
 dpt.png: dpt-7514bc35169e166e814236417f64cca7.png
 dpt/index.png: dpt-7514bc35169e166e814236417f64cca7.png
+favicon.ico: favicon-deae218542cbabeebc6b5a9ab877fe53.ico
+favicon/index.ico: favicon-deae218542cbabeebc6b5a9ab877fe53.ico
 jti_logo.png: jti_logo-198f0603d3996e08267e0f0657fac043.png
 jti_logo/index.png: jti_logo-198f0603d3996e08267e0f0657fac043.png
 judiciary.gif: judiciary-03b03b6d0b6cc36bb5c52e31027a214f.gif
@@ -113,6 +115,8 @@ kituo cha sheria.jpg: kituo cha sheria-ef34396c24e7093fe4700d8327b6da22.jpg
 kituo cha sheria/index.jpg: kituo cha sheria-ef34396c24e7093fe4700d8327b6da22.jpg
 kmja_log.png: kmja_log-2c5b1936d5a7776da2f81ded11d0e2f5.png
 kmja_log/index.png: kmja_log-2c5b1936d5a7776da2f81ded11d0e2f5.png
+kmja_logo.png: kmja_logo-deac6d1501e0bb36fb1f477e62509678.png
+kmja_logo/index.png: kmja_logo-deac6d1501e0bb36fb1f477e62509678.png
 pdf.png: pdf-7938c554bd867edef9b64d2854398996.png
 pdf/index.png: pdf-7938c554bd867edef9b64d2854398996.png
 refugee camps.jpg: refugee camps-c9e9049c73f811e9fc347c0122c47869.jpg
@@ -127,10 +131,10 @@ urban refugee.jpg: urban refugee-bd830b5aa82733a34785fab00190029f.jpg
 urban refugee/index.jpg: urban refugee-bd830b5aa82733a34785fab00190029f.jpg
 women.jpg: women-c8488ee19f09ac904779f22541a33f3c.jpg
 women/index.jpg: women-c8488ee19f09ac904779f22541a33f3c.jpg
-application.js: application-619ca2e72a8783ede06999edded2a961.js
-application/index.js: application-619ca2e72a8783ede06999edded2a961.js
-application.css: application-b7db9fd9c958a86befb555195f055666.css
-application/index.css: application-b7db9fd9c958a86befb555195f055666.css
+application.js: application-9d0444f7b96618f20e034cce9c25b4fa.js
+application/index.js: application-9d0444f7b96618f20e034cce9c25b4fa.js
+application.css: application-25df1f080a4fdc0a702ad48d1822aa2c.css
+application/index.css: application-25df1f080a4fdc0a702ad48d1822aa2c.css
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd/index.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-sd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-sd-0d589aa7db0edb179d5118ea3490b07d.png

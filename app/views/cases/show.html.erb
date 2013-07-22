@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="row-fluid" id="cases">
-	<div class="span12 offset10"><%= social_share_button_tag(@case.cause, title: "kkkkkkkkkkkkkkkkkkkk") %></div>
+	<div class="span12 offset10"><%= social_share_button_tag(@case.cause, title: "kkkkkkkkkkkkkkkkkkkk", :image => 'kmja_logo.png') %></div>
 <article class="case">
 <% if @case.cause.category == "criminal"%>
      <h3><%= @case.state.upcase %> vs. <%= @case.accused.upcase %></h3>

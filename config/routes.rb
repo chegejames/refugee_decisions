@@ -2,9 +2,6 @@ Unhcrkmja::Application.routes.draw do
 
 
 
-  resources :contacts
-
-
   mount Ckeditor::Engine => '/ckeditor'
 
   match "home" =>  "pages#home"
@@ -12,8 +9,6 @@ Unhcrkmja::Application.routes.draw do
   match "about_us" =>  "pages#about_us"
 
   match "programmes" => "pages#programmes"
-
-  match "contact_us" =>  "pages#contact_us"
 
   match "reports" => "pages#reports"
 

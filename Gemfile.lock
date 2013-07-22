@@ -53,6 +53,8 @@ GEM
     colorbox-rails (0.0.16)
       jquery-rails
       rails (>= 3.1.1)
+    contact_us (0.4.0)
+      rails (>= 3.0.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -154,6 +156,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 3.2.1)
   colorbox-rails
+  contact_us (~> 0.4.0)
   jquery-rails
   jquery-ui-rails
   mobile-fu
