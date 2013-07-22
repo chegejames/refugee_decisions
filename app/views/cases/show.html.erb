@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="row-fluid" id="cases">
-	<div class="span12 offset10"><%= social_share_button_tag(@case.cause.name , :photo => 'assets/kmja_logo.png', :text => truncate(@case.summary_of_decision, length: 100).html_safe) %></div>
+	<div class="span12 offset10"><%= social_share_button_tag(@case.cause.name , :photo => 'assets/kmja_logo.png', :title => truncate(@case.summary_of_decision, length: 100).html_safe) %></div>
 <article class="case">
 <% if @case.cause.category == "criminal"%>
      <h3><%= @case.state.upcase %> vs. <%= @case.accused.upcase %></h3>
