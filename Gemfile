@@ -60,3 +60,7 @@ gem 'social-share-button'
 gem 'mobile-fu'
 
 gem 'contact_us', '~> 0.4.0'
+
+gem "devise"
+
+gem 'cancan'

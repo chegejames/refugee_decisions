@@ -12,8 +12,18 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
+		<% if user_signed_in? %>
+		  <%= render 'layouts/nav'%>
+		<% else%>
 		<%= render 'layouts/main_nav'%>
+		<%end%>
 		<div class="container-fluid" id="main-content">
+			<% if notice.present?%>
+			<span class="label label-success"><%= notice %></span>
+			<%end%>
+			<% if alert.present?%>
+ 			<span class="label label-warning offset3"><%= alert %></span>
+ 			<%end%>
 			<%= yield %>
 		</div>
 		<%= render 'layouts/footer'%>

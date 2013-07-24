@@ -14,21 +14,28 @@
     color: #FF6600;
     text-align: center;
   }
+  h5{
+    color: white;
+    text-align: center;
+  }
+}
+#admin_nav{
+ background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+ ul{
+   margin-left: 20%;
+ } 
 }
 
-
 #main_nav{
-    height: 20px;
     background-color: #FF6600;
     padding: 15px 25px;
     box-shadow: 5px 5px 5px rgb(102, 102, 102);
     background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
   ul{
     margin-left: 33%;
-    margin-right: 15%;
     list-style-type: none;
     li{
-      margin-right: 3%;
+      margin-right: 5%;
       display: inline;
     a{
       font-size: 1.2em;
@@ -47,6 +54,7 @@
   }
 }
 #main-content{
+  min-height: 100%;
    #gallery{
      padding: 0px;
      margin: 0px;
@@ -99,29 +107,20 @@
       }
     }
     #search{
-      -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: auto;
-      padding: 5px;
       background: none repeat scroll 0% 0% white;
       border: 1px solid rgb(204, 204, 204);
 
          #case_search{
+           margin-left: 5%;
            input, select{
              margin-bottom: 10px;
             }
       .search_buttons{
-        width: 100%;
+        width: 94%;
       }
     }
        }
   
-  #myCarousel{
-    img{
-      width: 100%;
-    }
-  }
   aside{
     background: none repeat scroll 0% 0% white;
     border: 1px solid rgb(204, 204, 204);

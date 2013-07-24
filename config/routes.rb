@@ -2,6 +2,8 @@ Unhcrkmja::Application.routes.draw do
 
 
 
+  devise_for :users
+
   mount Ckeditor::Engine => '/ckeditor'
 
   match "home" =>  "pages#home"

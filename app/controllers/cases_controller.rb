@@ -1,4 +1,6 @@
 class CasesController < ApplicationController
+  skip_before_filter :authenticate_user!, :except => ["new", "create", "edit", "update", "destroy"]
+  load_and_authorize_resource :except => [:index, :show]
   # GET /cases
   # GET /cases.json
   def index

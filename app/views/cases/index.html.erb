@@ -18,9 +18,12 @@
     <p><span>Cause:</span> <%= cases.cause.name + " - " + cases.cause.category%></p>
     <p><span>Judge:</span><%= cases.judge.name%></p>
     <p><%= truncate(cases.summary_of_decision, length: 200).html_safe %></p>
+    <%if can? :create, Case%>
     <p class="pull-right"> <%= link_to "Edit", edit_case_path(cases), class: "btn btn-warning btn-mini" %>
     <%= link_to 'Destroy', cases, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-mini"%>
-                                                                                    <%= link_to 'Read more', cases, class: "btn btn-primary btn-mini" %></p>
+    <%end%>
+    
+     <%= link_to 'Read more', cases, class: "btn btn-primary btn-mini pull-right" %></p>
   </article>
 <% end %>
 
