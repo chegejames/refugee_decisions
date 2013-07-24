@@ -3,6 +3,11 @@
 <%= render "search"%>
 </div>
 <div class="span9" id="cases">
+<%if @cases.empty?%>
+<span class="label label-warning">sorry no cases found</span>
+<%else%>
+<span class="label label-success"><%= pluralize(@cases.count, 'case') %> found</span>
+<%end%>
 <% @cases.each do |cases| %>
   <article class="case">
     <% if cases.cause.category == "criminal"%>
@@ -22,7 +27,7 @@
     <p class="pull-right"> <%= link_to "Edit", edit_case_path(cases), class: "btn btn-warning btn-mini" %>
     <%= link_to 'Destroy', cases, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-mini"%>
     <%end%>
-    
+
      <%= link_to 'Read more', cases, class: "btn btn-primary btn-mini pull-right" %></p>
   </article>
 <% end %>

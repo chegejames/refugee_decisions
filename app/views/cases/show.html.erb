@@ -1,8 +1,20 @@
 <p id="notice"><%= notice %></p>
+  <ul class="breadcrumb">
+    <li><%= link_to "Judgmnents", cases_path%> <span class="divider">/</span></li>
+    <li class="active"><% if @case.cause.category == "criminal"%>
+     <%= @case.state.upcase %> vs. <%= @case.accused.upcase %>
+
+
+    <%else%>
+     <%= @case.complainant.upcase %> vs. <%= @case.defendant.upcase %>
+
+<%end%></li>
+    </ul>
 <div class="row-fluid" id="cases">
-	<div class="span12 offset10">
-		<%= social_share_button_tag(@case.cause.name , :image => 'assets/kmja_logo.png', :'data-type' => 'photo' )%>
-		</div>
+
+  <div class="span12 offset10">
+    <%= social_share_button_tag(@case.cause.name , :image => 'assets/kmja_logo.png', :'data-type' => 'photo' )%>
+    </div>
 <article class="case">
 <% if @case.cause.category == "criminal"%>
      <h3><%= @case.state.upcase %> vs. <%= @case.accused.upcase %></h3>
@@ -30,7 +42,9 @@
   <%= image_tag "pdf.png"%>
   <%= link_to "download full judgement", @case.pdf.url%>
 </p>
+<% if can? :edit, Case %>
 <%= link_to 'Edit', edit_case_path(@case), class: "btn" %> |
 <%= link_to 'Back', cases_path, class: "btn"%>
+<%end%>
 </article>
 </div>
