@@ -23,7 +23,6 @@ end
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'colorbox-rails'
 
 
 # To use ActiveModel has_secure_password
@@ -64,3 +63,9 @@ gem 'contact_us', '~> 0.4.0'
 gem "devise"
 
 gem 'cancan'
+
+gem 'fancybox2-rails', '~> 0.2.4'
+
+gem 'turbolinks'
+
+gem 'jquery-turbolinks'

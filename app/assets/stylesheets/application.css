@@ -10,10 +10,9 @@
  *
  *= require_self
  *= require jquery.ui.datepicker
- *= require colorbox-rails
  *= require social-share-button
  *= require vendor
  *= require cases
  *= require scaffolds
- *= require_tree .
+ *= require fancybox
  */

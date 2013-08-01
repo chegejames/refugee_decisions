@@ -45,9 +45,9 @@ class CasesController < ApplicationController
   # POST /cases
   # POST /cases.json
   def create
-    @judge = Judge.find(params[:case][:judge])
-    @cause = Cause.find(params[:case][:cause])
-    @case = Case.new(params[:case].except(:judge, :cause))
+    @judge = Judge.find(params[:case][:judge_id])
+    @cause = Cause.find(params[:case][:cause_id])
+    @case = Case.new(params[:case].except(:judge_id, :cause_id))
 
     respond_to do |format|
       if @case.save

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724105446) do
+ActiveRecord::Schema.define(:version => 20130730202145) do
 
   create_table "cases", :force => true do |t|
     t.integer  "judge_id"
@@ -74,12 +74,27 @@ ActiveRecord::Schema.define(:version => 20130724105446) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "trainings", :force => true do |t|
+  create_table "training_sessions", :force => true do |t|
     t.integer  "judge_id"
+    t.integer  "training_id"
     t.date     "date"
-    t.string   "remarks"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "training_sessions", ["judge_id"], :name => "index_training_sessions_on_judge_id"
+  add_index "training_sessions", ["training_id"], :name => "index_training_sessions_on_training_id"
+
+  create_table "trainings", :force => true do |t|
+    t.string   "name"
+    t.date     "date"
+    t.text     "remarks"
+    t.string   "report_file_name"
+    t.string   "report_content_type"
+    t.integer  "report_file_size"
+    t.datetime "report_updated_at"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "users", :force => true do |t|

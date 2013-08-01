@@ -1,25 +1,24 @@
-<h1><%= @judge.name%>: trainings</h1>
-
-<table class="table table-striped table-bordered table-hover table-condensed">
-  <tr>
-    <th>Date</th>
-    <th>Remarks</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="row-fluid">
+<div class="span12" id="reports">
+<h3>Trainings</h3>
 
 <% @trainings.each do |training| %>
-  <tr>
-    <td><%= training.date %></td>
-    <td><%= training.remarks %></td>
-    <td><%= link_to 'Show', [@judge, training], class: "btn btn-mini btn-info"%></td>
-    <td><%= link_to "Edit", edit_judge_training_path(@judge, training), class: "btn btn-mini btn-warning"%>
-    <td><%= link_to 'Destroy', [@judge, training], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger" %></td>
-  </tr>
+  <article class="report">
+    <h4><%= training.name%></h4>
+    <p class="pull-right"><span>Date: </span><%= training.date %></p>
+    <p><%= training.remarks.html_safe %></p>
+    <p>
+  <%= image_tag "pdf.png"%>
+  <%= link_to "download report", training.report.url%>
+  </p>
+  <% if can? :edit, training%>
+    <%= link_to 'Show', training, class: "btn btn-mini btn-info"%>
+    <%= link_to "Edit", edit_training_path(training), class: "btn btn-mini btn-warning"%>
+    <%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger" %>
+    <%end%>
+  </article>
 <% end %>
-</table>
+</div>
+</div>
 
-<br />
 
-<%= link_to "Back", @judge, class: "btn"%>

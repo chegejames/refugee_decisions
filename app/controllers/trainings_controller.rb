@@ -1,9 +1,10 @@
 class TrainingsController < ApplicationController
+  skip_before_filter :authenticate_user!, :except => ["new", "create", "edit", "update", "destroy"]
+  load_and_authorize_resource :except => [:index, :show]
   # GET /trainings
   # GET /trainings.json
   def index
-    @judge = Judge.find(params[:judge_id])
-    @trainings = @judge.trainings
+    @trainings = Training.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,6 @@ class TrainingsController < ApplicationController
   # GET /trainings/1
   # GET /trainings/1.json
   def show
-    @judge = Judge.find(params[:judge_id])
     @training = Training.find(params[:id])
 
     respond_to do |format|
@@ -26,7 +26,6 @@ class TrainingsController < ApplicationController
   # GET /trainings/new
   # GET /trainings/new.json
   def new
-    @judge = Judge.find(params[:judge_id])
     @training = Training.new
 
     respond_to do |format|
@@ -37,19 +36,17 @@ class TrainingsController < ApplicationController
 
   # GET /trainings/1/edit
   def edit
-    @judge = Judge.find(params[:judge_id])
     @training = Training.find(params[:id])
   end
 
   # POST /trainings
   # POST /trainings.json
   def create
-    @judge = Judge.find(params[:judge_id])
-    @training = @judge.trainings.build(params[:training])
+    @training = Training.new(params[:training])
 
     respond_to do |format|
       if @training.save
-        format.html { redirect_to [@judge, @training], notice: 'Training was successfully created.' }
+        format.html { redirect_to @training, notice: 'Training was successfully created.' }
         format.json { render json: @training, status: :created, location: @training }
       else
         format.html { render action: "new" }
@@ -61,12 +58,11 @@ class TrainingsController < ApplicationController
   # PUT /trainings/1
   # PUT /trainings/1.json
   def update
-    @judge = Judge.find(params[:judge_id])
     @training = Training.find(params[:id])
 
     respond_to do |format|
       if @training.update_attributes(params[:training])
-        format.html { redirect_to [@judge, @training], notice: 'Training was successfully updated.' }
+        format.html { redirect_to @training, notice: 'Training was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -78,12 +74,11 @@ class TrainingsController < ApplicationController
   # DELETE /trainings/1
   # DELETE /trainings/1.json
   def destroy
-    @judge = Judge.find(params[:judge_id])
     @training = Training.find(params[:id])
     @training.destroy
 
     respond_to do |format|
-      format.html { redirect_to judge_trainings_path(@judge) }
+      format.html { redirect_to trainings_path }
       format.json { head :no_content }
     end
   end

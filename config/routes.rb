@@ -17,11 +17,11 @@ Unhcrkmja::Application.routes.draw do
   resources :cases
 
 
-  resources :judges do
-     resources :trainings
-  end
+  resources :judges
 
+  resources :trainings
 
+  resources :training_sessions
   resources :causes
 
 

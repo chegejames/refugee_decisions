@@ -1,9 +1,10 @@
 class CreateTrainings < ActiveRecord::Migration
   def change
     create_table :trainings do |t|
-      t.references :judge
+      t.string :name
       t.date :date
-      t.string :remarks
+      t.text :remarks
+      t.attachment :report
 
       t.timestamps
     end

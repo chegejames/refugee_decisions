@@ -33,7 +33,7 @@
     box-shadow: 5px 5px 5px rgb(102, 102, 102);
     background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
   ul{
-    margin-left: 33%;
+    margin-left: 25%;
     list-style-type: none;
     li{
       margin-right: 5%;
@@ -58,11 +58,12 @@
 #main-content{
   min-height: 100%;
    #gallery{
-     padding: 0px;
-     margin: 0px;
+     padding: 0;
+     margin: 0;
      img{
+       background: url('loader.jpeg') no-repeat;
+       height: 100px;
        width: 150px;
-       height: 110px;
        margin: -2px;
        padding: 0;
        border: none;
@@ -83,7 +84,28 @@
     }
     #parties textarea{
       height: 35px;
-       }
+     }
+    #reports{
+      border: 1px solid rgb(204, 204, 204);
+      background: none repeat scroll 0% 0% white;
+      padding: 20px;
+      .report{
+        font-family: "Lucida Grande",Arial,Helvetica,Verdana,sans-serif;
+        color: rgb(27, 27, 27);
+        padding: 30px;
+        border-bottom: 1px inset rgb(204, 204, 204);
+        &:nth-child(odd){
+        background: none repeat scroll 0% 0% rgb(245, 245, 245);
+        border-bottom: 1px solid  rgb(204, 204, 204);
+        border-top: 1px solid  rgb(204, 204, 204);
+      }
+      p{
+          span{
+            color: rgb(1, 135, 197);
+          }
+        }
+    }
+    }
     #cases{
       border: 1px solid rgb(204, 204, 204);
       background: none repeat scroll 0% 0% white;
@@ -95,8 +117,8 @@
         border-bottom: 1px inset rgb(204, 204, 204);
         &:nth-child(odd){
         background: none repeat scroll 0% 0% rgb(245, 245, 245);
-        border-bottom: 1px solid  rgb(225, 225, 225);
-        border-top: 1px solid  rgb(225, 225, 225);
+        border-bottom: 1px solid  rgb(204, 204, 204);
+        border-top: 1px solid  rgb(204, 204, 204);
       }
         h3{
           text-align: center;
@@ -123,16 +145,6 @@
     }
        }
   
-  aside{
-    background: none repeat scroll 0% 0% white;
-    border: 1px solid rgb(204, 204, 204);
-    .nav-header{
-     h4{
-       text-align: center;
-       color: #EAB410;
-       }
-     }
-     }
      .content{
        padding: 15px;
        background: none repeat scroll 0% 0% white;
@@ -141,6 +153,14 @@
        }
        &#partners{
           margin-top: 20px;
+          #jti{
+            img{
+            margin-left: 20%;
+            width: 150px;
+            height: 150px;
+            }
+          }
+          
        }
        h2, h3, h4{
          text-align: center;

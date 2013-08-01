@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-
+<p>
+  <b>Name:</b>
+  <%= @training.name%>
+</p>
 <p>
   <b>Date:</b>
   <%= @training.date %>
@@ -8,9 +11,13 @@
 
 <p>
   <b>Remarks:</b>
-  <%= @training.remarks %>
+  <%= @training.remarks.html_safe %>
+</p>
+<p>
+  <%= image_tag "pdf.png"%>
+  <%= link_to "download full report", @training.report.url%>
 </p>
 
 
-<%= link_to 'Edit', edit_judge_training_path(@judge, @training), class: "btn" %> |
-<%= link_to 'Back', judge_trainings_path(@judge), class: "btn" %>
+<%= link_to 'Edit', edit_training_path(@training), class: "btn" %> |
+<%= link_to 'Back', trainings_path, class: "btn" %>
