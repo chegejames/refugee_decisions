@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Judge:</b>
+  <%= @training_session.judge.name %>
+</p>
+
+<p>
+  <b>Traning:</b>
+  <%= @training_session.training.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @training_session.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_training_session_path(@training_session) %> |
+<%= link_to 'Back', training_sessions_path %>

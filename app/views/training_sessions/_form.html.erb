@@ -1,0 +1,29 @@
+<%= form_for(@training_session) do |f| %>
+  <% if @training_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@training_session.errors.count, "error") %> prohibited this training_session from being saved:</h2>
+
+      <ul>
+      <% @training_session.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :judge %><br />
+    <%= f.select :judge_id, options_from_collection_for_select(Judge.all, :id, :name), prompt: "----select judge----"%>
+  </div>
+  <div class="field">
+    <%= f.label :training %><br />
+    <%= f.select :training_id, options_from_collection_for_select(Training.all, :id, :name), prompt: "----select training----"%>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
