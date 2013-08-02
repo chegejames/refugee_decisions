@@ -113,6 +113,8 @@ loader.jpeg: loader-9a4a63755324e27817c69ae665cbb1b0.jpeg
 loader/index.jpeg: loader-9a4a63755324e27817c69ae665cbb1b0.jpeg
 pdf.png: pdf-7938c554bd867edef9b64d2854398996.png
 pdf/index.png: pdf-7938c554bd867edef9b64d2854398996.png
+preloader.gif: preloader-0e6ba3bf175ce5090efd6316d979807e.gif
+preloader/index.gif: preloader-0e6ba3bf175ce5090efd6316d979807e.gif
 refugee consortium of kenya.jpg: refugee consortium of kenya-71a371f52314046b26f6d46281805e7d.jpg
 refugee consortium of kenya/index.jpg: refugee consortium of kenya-71a371f52314046b26f6d46281805e7d.jpg
 unhcr1.jpg: unhcr1-9a90d33f9121abc7da6d65ff8443ec98.jpg
@@ -121,8 +123,8 @@ unhcr_logo.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
 unhcr_logo/index.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
 application.js: application-b1df07c21c93b5fe2360f1b4d6485cbf.js
 application/index.js: application-b1df07c21c93b5fe2360f1b4d6485cbf.js
-application.css: application-220494b1070021b75e847278323d240b.css
-application/index.css: application-220494b1070021b75e847278323d240b.css
+application.css: application-76a9ff49423638efd03f94bed1248da2.css
+application/index.css: application-76a9ff49423638efd03f94bed1248da2.css
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd/index.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-sd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-sd-0d589aa7db0edb179d5118ea3490b07d.png
