@@ -1,0 +1,30 @@
+<%if @cases.empty?%>
+<span class="label label-warning">sorry no cases found</span>
+<%else%>
+<span class="label label-success"><%= pluralize(@cases.count, 'case') %> found</span>
+<%end%>
+<% @cases.each do |cases| %>
+  <article class="case">
+    <% if cases.cause.category == "criminal"%>
+     <h3><%= cases.state %> vs. <%= cases.accused %></h3>
+    <%else%>
+     <h3><%= cases.complainant %> vs. <%= cases.defendant %></h3>
+    <%end%>
+    <article class="row-fluid">
+    <p class="span4"><span>Case Number:</span> <%= cases.case_number %></p>
+    <p class="span4"><span>Delivery Date:</span> <%= cases.year_of_judgement %></p>
+    <p class="span4"><span>Court:</span> <%= cases.court %></p>
+    </article>
+    <p><span>Cause:</span> <%= cases.cause.name + " - " + cases.cause.category%></p>
+    <p><span>Judge:</span><%= cases.judge.name%></p>
+    <p><%= truncate(cases.summary_of_decision, length: 200).html_safe %></p>
+    <%if can? :create, Case%>
+    <p class="pull-right"> <%= link_to "Edit", edit_case_path(cases), class: "btn btn-warning btn-mini" %>
+    <%= link_to 'Destroy', cases, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-mini"%>
+    <%end%>
+
+     <%= link_to 'Read more', cases, class: "btn btn-primary btn-mini pull-right" %></p>
+  </article>
+<% end %>
+<br />
+<%= will_paginate @cases, class: "pagination"%>

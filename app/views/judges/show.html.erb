@@ -1,12 +1,22 @@
-<p id="notice"><%= notice %></p>
+<ul class="breadcrumb">
+         <li><%= link_to "Judges".upcase!, judges_path%> <span class="divider">/</span></li>
+    <li class="active"><%= @judge.name.upcase%></li>
+ </ul>
 
 <p>
   <b>Name:</b>
-  <%= @judge.name %>
+  <strong><%= @judge.name %></strong>
 </p>
+<p>
+ <b>ID:</b>
+ <strong><%= @judge.membership_id%></strong>
+</p>
+
 
 <br />
 <br />
 <%= link_to 'Edit', edit_judge_path(@judge), class: "btn" %> |
 <%= link_to 'Back', judges_path, class: "btn" %>
+<%= link_to "View cases", cases_judge_path, class: "btn btn-primary"%>
+<%= link_to "View trainings", trainings_judge_path, class: "btn btn-primary"%>
 

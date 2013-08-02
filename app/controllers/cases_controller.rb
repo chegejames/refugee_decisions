@@ -1,16 +1,19 @@
 class CasesController < ApplicationController
-  skip_before_filter :authenticate_user!, :except => ["new", "create", "edit", "update", "destroy"]
+  before_filter :authenticate_user!, :except => ["index", "show"]
   load_and_authorize_resource :except => [:index, :show]
   # GET /cases
   # GET /cases.json
   def index
     @search = Case.search(params[:q])
     @cases = @search.result.paginate(:page => params[:page], :per_page => 10).order("id ASC")
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.mobile
-      format.json { render json: @cases }
+    if request.xhr?
+    render :partial => 'cases', :object => @cases, :content_type => 'text/html'
+      else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.mobile
+        format.json { render json: @cases }
+      end
     end
   end
 

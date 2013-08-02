@@ -59,19 +59,11 @@ ActiveRecord::Schema.define(:version => 20130730202145) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
-  create_table "contacts", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "website"
-    t.text     "message"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "judges", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "membership_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "training_sessions", :force => true do |t|
@@ -89,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20130730202145) do
     t.string   "name"
     t.date     "date"
     t.text     "remarks"
+    t.boolean  "publish"
     t.string   "report_file_name"
     t.string   "report_content_type"
     t.integer  "report_file_size"

@@ -13,7 +13,7 @@
 <% @causes.each do |cause| %>
   <tr>
     <td><%= cause.name %></td>
-    <td><%= cause.description %></td>
+    <td><%= cause.description.html_safe %></td>
     <td><%= cause.category %></td>
     <td><%= link_to 'Show', cause, class: "btn btn-mini btn-info" %></td>
     <td><%= link_to 'Edit', edit_cause_path(cause), class: "btn btn-mini btn-warning" %></td>

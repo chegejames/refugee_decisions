@@ -11,9 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require jquery.ui.draggable
-//= require jquery.ui.droppable
 //= require jquery.ui.datepicker
 //= require fancybox
 //= require ckeditor/init
@@ -21,5 +20,6 @@
 //= require social-share-button
 //= require vendor
 //= require cases
-
+//= require jquery.tokeninput
+//= require turbolinks
 

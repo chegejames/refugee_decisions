@@ -1,10 +1,11 @@
 class TrainingSessionsController < ApplicationController
-  skip_before_filter :authenticate_user!, :except => ["new", "create", "edit", "update", "destroy"]
+  before_filter :authenticate_user!, :except => ["index", "show"]
   load_and_authorize_resource :except => [:index, :show]
   # GET /training_sessions
   # GET /training_sessions.json
   def index
-    @training_sessions = TrainingSession.all
+    @training = Training.find(params[:training_id])
+    @training_sessions = @training.training_sessions.group("date").select("date")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,6 +27,7 @@ class TrainingSessionsController < ApplicationController
   # GET /training_sessions/new
   # GET /training_sessions/new.json
   def new
+    @training = Training.find(params[:training_id])
     @training_session = TrainingSession.new
 
     respond_to do |format|
@@ -42,16 +44,15 @@ class TrainingSessionsController < ApplicationController
   # POST /training_sessions
   # POST /training_sessions.json
   def create
-    @judge = Judge.find(params[:training_session][:judge_id])
-    @training = Training.find(params[:training_session][:training_id])
+    @training = Training.find(params[:training_id])
+    @training.create_training_sessions(params[:training_session][:judge_tokens], params[:training_session][:date])
     @training_session = TrainingSession.new(params[:training_session].except(:judge, :training))
 
     respond_to do |format|
-      if @training_session.save
-        @judge.training_sessions <<  @training_session
-        @training.training_sessions <<  @training_session
-        format.html { redirect_to @training_session, notice: 'Training session was successfully created.' }
-        format.json { render json: @training_session, status: :created, location: @training_session }
+      if @training_session.valid?
+
+        format.html { redirect_to @training, notice: 'Training session was successfully created.' }
+        format.json { render json: @training, status: :created, location: @training_session }
       else
         format.html { render action: "new" }
         format.json { render json: @training_session.errors, status: :unprocessable_entity }

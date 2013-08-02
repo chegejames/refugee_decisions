@@ -1,0 +1,29 @@
+<%if @trainings.empty?%>
+<span class="label label-warning">sorry no cases found</span>
+<%else%>
+<span class="label label-success"><%= pluralize(@trainings.count, 'trainings') %> found</span>
+<%end%>
+<% @trainings.each do |training| %>
+  <article class="report">
+    <h4><%= training.name%></h4>
+    <p class="pull-right"><span>Date: </span><%= training.date %></p>
+    <p><%= training.remarks.html_safe %></p>
+    <p>
+  <%= image_tag "pdf.png"%>
+  <%= link_to "download report", training.report.url%>
+  </p>
+  <% if can? :edit, training%>
+    <%= link_to 'Show', training, class: "btn btn-mini btn-info"%>
+    <%= link_to "Edit", edit_training_path(training), class: "btn btn-mini btn-warning"%>
+    <%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger" %>
+    <% if training.publish?%>
+      <%= link_to "Retract", retract_training_path(training), class: "btn btn-mini btn-danger"%>
+    <%else%>
+    <%= link_to "Publish", publish_training_path(training), class: "btn-mini btn-primary btn"%>
+
+    <%end%>
+    <%end%>
+  </article>
+<% end %>
+<br />
+<%= will_paginate @trainings, class: "pagination"%>

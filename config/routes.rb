@@ -17,11 +17,21 @@ Unhcrkmja::Application.routes.draw do
   resources :cases
 
 
-  resources :judges
+  resources :judges do
+    member do
+      get 'cases'
+      get 'trainings'
+    end
+  end
 
-  resources :trainings
-
-  resources :training_sessions
+  resources :trainings do
+    resources :training_sessions
+    member do
+      get 'participants'
+      get 'publish'
+      get 'retract'
+    end
+  end
   resources :causes
 
 

@@ -1,0 +1,6 @@
+<%= search_form_for @search, html: {class: "form-search"} do |f|%>
+ <%= f.number_field :membership_id_eq, placeholder: "Membership ID"%>
+ <%= f.text_field :name_cont, placeholder: "Name"%>
+ <%= f.submit "Search", class: "btn btn-primary"%>
+  <%= link_to "clear", judges_path, class: "btn btn-warning"%>
+<%end%>

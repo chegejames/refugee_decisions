@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<%= favicon_link_tag 'favicon.ico' %>
-		<title> <% if content_for?(:title) %>
-			Decision matters on refugees: <%= yield :title %>
-			<% else %>
-			Decision matters on refugees
-			<% end %> </title>
-		<%= stylesheet_link_tag    "application", :media => "all" %>
-		<%= javascript_include_tag "application" %>
-		<%= csrf_meta_tags %>
-	</head>
-	<body>
-		<% if user_signed_in? %>
-		  <%= render 'layouts/nav'%>
-		<% else%>
-		<%= render 'layouts/main_nav'%>
-		<%end%>
-		<div class="container-fluid" id="main-content">
-			<% if notice.present?%>
-			<span class="label label-success"><%= notice %></span>
-			<%end%>
-			<% if alert.present?%>
- 			<span class="label label-warning offset3"><%= alert %></span>
- 			<%end%>
-			<%= yield %>
-		</div>
-		<%= render 'layouts/footer'%>
+  <head>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= display_meta_tags :site => 'Court decisions on refugee issues' %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <% if user_signed_in? %>
+      <%= render 'layouts/nav'%>
+    <% else%>
+    <%= render 'layouts/main_nav'%>
+    <%end%>
+    <div class="container-fluid" id="main-content">
+      <% if notice.present?%>
+      <span class="label label-success"><%= notice %></span>
+      <%end%>
+      <% if alert.present?%>
+      <span class="label label-warning offset3"><%= alert %></span>
+      <%end%>
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer'%>
 
-	</body>
+  </body>
 </html>

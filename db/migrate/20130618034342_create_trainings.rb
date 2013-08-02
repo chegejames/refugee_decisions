@@ -4,6 +4,7 @@ class CreateTrainings < ActiveRecord::Migration
       t.string :name
       t.date :date
       t.text :remarks
+      t.boolean :publish
       t.attachment :report
 
       t.timestamps

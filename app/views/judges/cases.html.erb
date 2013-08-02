@@ -1,0 +1,29 @@
+ <ul class="breadcrumb">
+         <li><%= link_to "#{@judge.name}".upcase!, @judge%> <span class="divider">/</span></li>
+    <li class="active">Cases</li>
+ </ul>
+<table class="table table-striped table-bordered table-hover table-condensed">
+  <tr>
+    <th>Case number</th>
+    <th>Parties</th>
+    <th>Cause</th>
+    <th>Category</th>
+    <th>Date</th>
+    <th>Court</th>
+  </tr>
+  <% @cases.each do |cases| %>
+  <tr>
+    <td><%= cases.case_number %></td>
+    <td> <% if cases.cause.category == "criminal"%>
+     <%= cases.state %> vs. <%= cases.accused %>
+    <%else%>
+     <%= cases.complainant %> vs. <%= cases.defendant %>
+    <%end%></td>
+    <td><%= cases.cause.name%></td>
+    <td><%= cases.cause.category%></td>
+    <td><%= cases.year_of_judgement %></td>
+    <td><%= cases.court%></td>
+    <td><%= link_to "show", cases, class: "btn btn-primary btn-mini"%></td>
+  </tr>
+  <%end%>
+  </table>

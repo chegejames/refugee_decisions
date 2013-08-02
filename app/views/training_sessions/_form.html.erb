@@ -1,4 +1,4 @@
-<%= form_for(@training_session) do |f| %>
+<%= form_for([@training, @training_session]) do |f| %>
   <% if @training_session.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@training_session.errors.count, "error") %> prohibited this training_session from being saved:</h2>
@@ -10,18 +10,13 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :judge %><br />
-    <%= f.select :judge_id, options_from_collection_for_select(Judge.all, :id, :name), prompt: "----select judge----"%>
+    <%= f.label :date_of_training %><br />
+    <%= f.text_field :date, class: "datepicker", placeholder: "Date"%>
   </div>
   <div class="field">
-    <%= f.label :training %><br />
-    <%= f.select :training_id, options_from_collection_for_select(Training.all, :id, :name), prompt: "----select training----"%>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
+    <%= f.label :judge_tokens, "Judges" %><br />
+    <%= f.text_field :judge_tokens, id: "judges_tokens"%>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>

@@ -21,7 +21,7 @@
   }
 }
 #admin_nav{
- background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+
  ul{
    margin-left: 20%;
  } 
@@ -31,7 +31,10 @@
     background-color: #FF6600;
     padding: 15px 25px;
     box-shadow: 5px 5px 5px rgb(102, 102, 102);
+     background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
     background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+     background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+     background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
   ul{
     margin-left: 25%;
     list-style-type: none;
@@ -106,6 +109,14 @@
         }
     }
     }
+    .wrapper{
+     background: none repeat scroll 0% 0% white;
+     background-image: -moz-linear-gradient(left, white 0%,white 23.4%, #F4F6FF 23.4%, #F4F6FF 100%);
+     background-image: -webkit-linear-gradient(left, white 0%,white 23.4%, #F4F6FF 23.4%, #F4F6FF 100%);
+     background-image: -o-linear-gradient(left, white 0%,white 23.4%, #F4F6FF 23.4%, #F4F6FF 100%);
+     background-image: -linear-gradient(left, white 0%,white 23.4%, #F4F6FF 23.4%, #F4F6FF 100%); 
+    }
+
     #cases{
       border: 1px solid rgb(204, 204, 204);
       background: none repeat scroll 0% 0% white;
@@ -132,15 +143,14 @@
     }
     #search{
       background: none repeat scroll 0% 0% white;
-      border: 1px solid rgb(204, 204, 204);
-
-         #case_search{
+       
+         .search_form{
            margin-left: 5%;
            input, select{
              margin-bottom: 10px;
             }
       .search_buttons{
-        width: 94%;
+        width: 89%;
       }
     }
        }

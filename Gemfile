@@ -5,8 +5,8 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
+#gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -19,8 +19,9 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-end
 
+end
+gem "jquery-tokeninput-rails", "~> 1.6.0"
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
@@ -52,8 +53,6 @@ gem 'unicorn'
 
 gem 'ransack'
 
-gem 'bootstrap-datepicker-rails'
-
 gem 'social-share-button'
 
 gem 'mobile-fu'
@@ -69,3 +68,7 @@ gem 'fancybox2-rails', '~> 0.2.4'
 gem 'turbolinks'
 
 gem 'jquery-turbolinks'
+
+gem 'meta-tags', :require => 'meta_tags'
+
+gem "ransack"

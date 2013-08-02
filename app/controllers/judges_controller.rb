@@ -1,9 +1,24 @@
 class JudgesController < ApplicationController
+  before_filter :authenticate_user!
+  def cases
+    @judge = Judge.find(params[:id])
+    @cases = @judge.cases
+  end
+
+  def trainings
+    @judge = Judge.find(params[:id])
+    @training_sessions = @judge.training_sessions
+  end
   # GET /judges
   # GET /judges.json
   def index
-    @judges = Judge.all
-
+    if request.xhr?
+      @judges = Judge.where("name like ?", "%#{params[:q]}%")
+    else
+      @search = Judge.search(params[:q])
+      @judges = @search.result
+      #@members = @search.result.paginate(:page => params[:page], :per_page => 20).order("id ASC")
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @judges }
@@ -14,6 +29,8 @@ class JudgesController < ApplicationController
   # GET /judges/1.json
   def show
     @judge = Judge.find(params[:id])
+    @training_sessions = @judge.training_sessions
+    @cases = @judge.cases
 
     respond_to do |format|
       format.html # show.html.erb
