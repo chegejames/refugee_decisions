@@ -8,5 +8,4 @@ class Cause < ActiveRecord::Base
   CAUSES = Array.new
   Cause.all.each{|c| CAUSES << [c.name + " - " + c.category, c.id]}
 
-
 end

@@ -6,7 +6,9 @@
   <%= f.text_field :judge_name_cont, placeholder: "Judge's name"%>
   </div>
   <div class="field">
-  <%= f.select :cause_id_eq, Cause::CAUSES, include_blank: "select Cause"%>
+  <%causes = Cause.all.map{|cause| [cause.name+" - "+cause.category, cause.id]}%>
+    <%= f.select :cause_id_eq, options_for_select(causes), include_blank: "select Cause"%>
+
   </div>
  <div class="field">
   <%= f.text_field :case_number_cont, placeholder: "Case number"%>
