@@ -7,4 +7,6 @@ class ApplicationController < ActionController::Base
     request.format = :mobile if is_mobile_device?
   end
 
+  #FIXME fix contact us form
+
 end

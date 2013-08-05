@@ -9,7 +9,7 @@ ContactUs.setup do |config|
   config.mailer_from = nil
 
   # Configure the e-mail address which should receive the contact form email notifications.
-  config.mailer_to = "kmjasec@yahoo.com"
+  config.mailer_to = "chegejames3@gmail.com"
 
   # ==> Form Configuration
 
@@ -17,7 +17,7 @@ ContactUs.setup do |config|
   config.require_name = true
 
   # Configure the form to ask for a subject.
-  config.require_subject = false
+  config.require_subject = true
 
   # Configure the form gem to use.
   # Example:
