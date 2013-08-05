@@ -4,6 +4,7 @@ class CreateTrainingSessions < ActiveRecord::Migration
       t.references :judge
       t.references :training
       t.date :date
+      t.string :location
 
       t.timestamps
     end

@@ -1,15 +1,15 @@
 <ul class="breadcrumb">
          <li><%= link_to "Judges".upcase!, judges_path%> <span class="divider">/</span></li>
-    <li class="active"><%= @judge.name.upcase%></li>
+    <li class="active"><%= "#{@judge.designation + " " +@judge.name.upcase}"%></li>
  </ul>
 
 <p>
-  <b>Name:</b>
-  <strong><%= @judge.name %></strong>
+  <b><%= @judge.designation%></b>
+  <%= @judge.name %>
 </p>
 <p>
- <b>ID:</b>
- <strong><%= @judge.membership_id%></strong>
+ <b>Membership_id:</b>
+ <%= @judge.membership_id%>
 </p>
 
 

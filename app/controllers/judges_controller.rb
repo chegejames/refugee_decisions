@@ -16,8 +16,8 @@ class JudgesController < ApplicationController
       @judges = Judge.where("name like ?", "%#{params[:q]}%")
     else
       @search = Judge.search(params[:q])
-      @judges = @search.result
-      #@members = @search.result.paginate(:page => params[:page], :per_page => 20).order("id ASC")
+      @judges = @search.result.paginate(:page => params[:page], :per_page => 20).order("id ASC")
+
     end
     respond_to do |format|
       format.html # index.html.erb

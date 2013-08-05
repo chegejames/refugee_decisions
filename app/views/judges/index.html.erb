@@ -1,9 +1,16 @@
 <h1>Listing judges</h1>
+<%if @judges.empty?%>
+<span class="label label-warning">sorry no judges found</span>
+<%else%>
+<span class="label label-success"><%= pluralize(@judges.count, 'Judge') %> found</span>
+<%end%>
+<br />
 <%= render "search"%>
 <table class="table table-striped table-bordered table-hover table-condensed">
   <tr>
    <th><%= sort_link @search, :membership_id, "Membership ID"%></th>
-    <th><%= sort_link @search, :name, "name"%></th>
+    <th><%= sort_link @search, :designation, "Designation"%>
+    <th><%= sort_link @search, :name, "Name"%></th>
     <th></th>
     <th>
   </tr>
@@ -11,6 +18,7 @@
 <% @judges.each do |judge| %>
   <tr>
     <td><%= judge.membership_id%></td>
+    <td><%= judge.designation%></td>
     <td class="judge"><%= judge.name %></td>
 
     <td><%= link_to 'Show', judge, class: "btn btn-mini btn-info" %></td>
@@ -21,5 +29,6 @@
 </table>
 
 <br />
+<%= will_paginate @judges, class: "pagination"%>
 
 

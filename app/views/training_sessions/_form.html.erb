@@ -12,7 +12,11 @@
   <% end %>
   <div class="field">
     <%= f.label :date_of_training %><br />
-    <%= f.text_field :date, class: "datepicker", placeholder: "Date"%>
+    <%= f.text_field :date, class: "datepicker"%>
+  </div>
+  <div class="field">
+     <%= f.label :location%><br/>
+     <%= f.text_field :location%>
   </div>
   <div class="field">
     <%= f.label :judge_tokens, "Judges" %><br />

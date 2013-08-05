@@ -19,6 +19,10 @@
     <%= f.label :membership_id%><br />
     <%= f.text_field :membership_id%>
  </div>
+   <div class="field">
+     <%= f.label :desigantion%>
+     <%= f.select :designation, Judge::DESIGNATIONS, include_blank: "Designation"%>
+   </div>
 
 
   <div class="actions">

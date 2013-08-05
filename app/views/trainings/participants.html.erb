@@ -1,5 +1,5 @@
 <ul class="breadcrumb">
-        <li><%= link_to "Training on #{@date.to_date}", training_training_sessions_path(@training)%> <span class="divider">/</span></li>
+        <li><%= link_to "Training at: #{@location + " Date: " +@date}", training_training_sessions_path(@training)%> <span class="divider">/</span></li>
     <li class="active">Participants</li>
 <table class="table table-striped table-bordered table-hover table-condensed">
   <tr>
@@ -8,7 +8,7 @@
   <% @judges.each do | judge|%>
   <tr>
   <td><%= judge.name%></td>
-  <td><%= link_to "show", judge, class: "btn btn-primary btn-mini"%></td>
+  <td><%= link_to "show", judge, class: "btn btn-primary btn-small"%></td>
   </tr>
   <%end%>
  </table>

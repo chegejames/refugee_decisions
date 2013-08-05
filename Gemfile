@@ -72,3 +72,5 @@ gem 'jquery-turbolinks'
 gem 'meta-tags', :require => 'meta_tags'
 
 gem "ransack"
+
+gem "brakeman"

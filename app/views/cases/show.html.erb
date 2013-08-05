@@ -13,7 +13,7 @@
 <div class="row-fluid" id="cases">
 
   <div class="span12 offset10">
-    <%= social_share_button_tag(@case.cause.name , :image => 'assets/kmja_logo.png', :'data-type' => 'photo' )%>
+    <%= social_share_button_tag( @case.summary_of_decision.html_safe , :image => 'assets/kmja_logo.png', :'data-type' => 'photo' )%>
     </div>
 <article class="case">
 <% if @case.cause.category == "criminal"%>

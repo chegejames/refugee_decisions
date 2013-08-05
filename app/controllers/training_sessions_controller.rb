@@ -5,7 +5,7 @@ class TrainingSessionsController < ApplicationController
   # GET /training_sessions.json
   def index
     @training = Training.find(params[:training_id])
-    @training_sessions = @training.training_sessions.group("date").select("date")
+    @training_sessions = @training.training_sessions.group("date", "location").select(["location", "date"])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,9 +43,10 @@ class TrainingSessionsController < ApplicationController
 
   # POST /training_sessions
   # POST /training_sessions.json
+  #FIXME fix training to suit location
   def create
     @training = Training.find(params[:training_id])
-    @training.create_training_sessions(params[:training_session][:judge_tokens], params[:training_session][:date])
+    @training.create_training_sessions(params[:training_session][:date], params[:training_session][:judge_tokens], params[:training_session][:location])
     @training_session = TrainingSession.new(params[:training_session].except(:judge, :training))
 
     respond_to do |format|
