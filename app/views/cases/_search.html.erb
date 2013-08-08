@@ -1,7 +1,7 @@
 <ul class="nav nav-list">
         <li><h4>Search</h4></li>
 </ul>
-<%= search_form_for @search, remote: true, html: {class: "form-horizontal search_form"} do |f| %>
+<%= search_form_for @search, remote: true, html: {class: "form-horizontal search_form", id: "cases_search"} do |f| %>
   <div class="field">
   <%= f.text_field :judge_name_cont, placeholder: "Judge's name"%>
   </div>

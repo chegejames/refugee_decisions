@@ -139,6 +139,22 @@
      background-image: -o-linear-gradient(left, white 0%,white 23.4%, #F4F6FF 23.4%, #F4F6FF 100%);
      background-image: -linear-gradient(left, white 0%,white 23.4%, #F4F6FF 23.4%, #F4F6FF 100%); 
     }
+     #judgement{
+      border: 1px solid rgb(204, 204, 204);
+      background: none repeat scroll 0% 0% white;
+      padding:20px;
+        font-family: "Lucida Grande",Arial,Helvetica,Verdana,sans-serif;
+        color: rgb(27, 27, 27);
+        border-bottom: 1px inset rgb(204, 204, 204);
+        h3{
+          text-align: center;
+        }
+        p{
+          span{
+            color: rgb(1, 135, 197);
+          }
+        }
+    }
 
     #cases{
       border: 1px solid rgb(204, 204, 204);
