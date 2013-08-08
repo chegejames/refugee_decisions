@@ -1,14 +1,8 @@
-<ul class="breadcrumb">
-        <li><%= link_to "Training at: #{@location + " Date: " +@date}", training_training_sessions_path(@training)%> <span class="divider">/</span></li>
-    <li class="active">Participants</li>
-<table class="table table-striped table-bordered table-hover table-condensed">
-  <tr>
-    <th>Name</th>
-  </tr>
-  <% @judges.each do | judge|%>
-  <tr>
-  <td><%= judge.name%></td>
-  <td><%= link_to "show", judge, class: "btn btn-primary btn-small"%></td>
-  </tr>
-  <%end%>
- </table>
+<div class="row-fluid wrapper">
+<div class="span3" id="search">
+         <%= render partial: "participantSearch", locals: {:date => @date, :location => @location}%>
+</div>
+<div class="span9" id="participants">
+<%= render "participants"%>
+</div>
+</div>

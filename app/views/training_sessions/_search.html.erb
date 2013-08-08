@@ -1,0 +1,18 @@
+<ul class="nav nav-list">
+        <li><h4>Search</h4></li>
+</ul>
+<%= search_form_for [@training, @search], remote: true, html: {class: "form-horizontal search_form", id: "training_session_search"} do |f| %>
+  <div class="field">
+  <%= f.text_field :location_cont, placeholder: "Training location"%>
+  </div>
+   <div class="field">
+  <%= f.text_field :date_eq, class: "datepicker", placeholder: "Date"%>
+  </div>
+
+  <div class="action search_buttons">
+  <%= f.submit class: "btn btn-primary btn-block"%>
+
+  <%= link_to "clear", training_training_sessions_path(@training), class: "btn btn-warning btn-block"%>
+  </div>
+
+<%end%>

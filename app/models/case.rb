@@ -5,8 +5,8 @@ class Case < ActiveRecord::Base
 
   has_attached_file :pdf
 
-  validates_associated :judge, :cause
-  validates :year_of_judgement, :case_number, :court, :summary_of_decision, presence: true
+  validates :year_of_judgement, :case_number, :court, :summary_of_decision, :pdf, presence: true
+  validates_presence_of :judge, :cause
 
  # validates :defendant, :complainant, presence: true, :if => :civil_case?
  # validates :state, :accused, presence: true, :if => :criminal_case?

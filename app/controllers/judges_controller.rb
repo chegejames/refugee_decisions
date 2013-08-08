@@ -2,13 +2,32 @@ class JudgesController < ApplicationController
   before_filter :authenticate_user!
   def cases
     @judge = Judge.find(params[:id])
-    @cases = @judge.cases
+    @search = @judge.cases.search(params[:q])
+    @cases = @search.result.paginate(:page => params[:page], :per_page => 20).order("id ASC")
+    if request.xhr?
+        render :partial => 'casespartial', :object => @cases, :content_type => 'text/html'
+      else
+        respond_to do |format|
+        format.html
+        format.json { render json: @cases }
+      end
+    end
   end
 
   def trainings
     @judge = Judge.find(params[:id])
-    @training_sessions = @judge.training_sessions
+    @search = @judge.training_sessions.search(params[:q])
+    @training_sessions = @search.result.paginate(:page => params[:page], :per_page => 20).order("id ASC")
+    if request.xhr?
+        render :partial => 'trainingspartial', :object => @training_sessions, :content_type => 'text/html'
+      else
+        respond_to do |format|
+        format.html
+        format.json { render json: @cases }
+      end
+    end
   end
+
   # GET /judges
   # GET /judges.json
   def index

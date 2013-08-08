@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true%>
   </div>
   <div class="field">
-    <%= f.label :membership_id%><br />
-    <%= f.text_field :membership_id%>
+    <%= f.label :membership_id, "Membership ID"%><br />
+    <%= f.number_field :membership_id, required: true%>
  </div>
    <div class="field">
      <%= f.label :desigantion%>
-     <%= f.select :designation, Judge::DESIGNATIONS, include_blank: "Designation"%>
+     <%= f.select :designation, Judge::DESIGNATIONS, include_blank: "Designation", required: true%>
    </div>
 
 

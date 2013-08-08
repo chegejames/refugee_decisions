@@ -1,0 +1,8 @@
+<%= search_form_for [@search] , :url => {:action =>  :participants, :date => "1-1-1", :location => "moi"}, html: {class: "form-search"} do |f|%>
+ <%= f.number_field :judge_membership_id_eq, placeholder: "Membership ID"%>
+ <%= f.select :judge_designation_eq, Judge::DESIGNATIONS, include_blank: "#{'-'*10}Designation#{'-'*14}"%>
+ <%= f.text_field :judge_name_cont, placeholder: "Name"%>
+      <%= f.submit "Search",class: "btn btn-primary"%>
+  <%= link_to "clear", class: "btn btn-warning"%>
+<%end%>
+

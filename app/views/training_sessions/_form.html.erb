@@ -12,15 +12,15 @@
   <% end %>
   <div class="field">
     <%= f.label :date_of_training %><br />
-    <%= f.text_field :date, class: "datepicker"%>
+    <%= f.text_field :date, class: "datepicker", required: true%>
   </div>
   <div class="field">
      <%= f.label :location%><br/>
-     <%= f.text_field :location%>
+     <%= f.text_field :location, required: true%>
   </div>
   <div class="field">
     <%= f.label :judge_tokens, "Judges" %><br />
-    <%= f.text_field :judge_tokens, id: "judges_tokens"%>
+    <%= f.text_field :judge_tokens, id: "judges_tokens", required: true%>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>

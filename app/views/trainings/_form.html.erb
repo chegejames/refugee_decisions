@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :name%></br>
-    <%= f.text_field :name%>
+    <%= f.text_field :name, required: true%>
   </div>
   <div class="field">
     <%= f.label :date %><br />
@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :remarks %><br />
-    <%= f.cktext_area :remarks %>
+    <%= f.cktext_area :remarks%>
   </div>
    <div class="field">
     <%= f.label :upload_report%></br>
-    <%= f.file_field :report%>
+    <%= f.file_field :report, required: true%>
   </div>
 
   <div class="actions">

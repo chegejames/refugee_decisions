@@ -1,0 +1,34 @@
+<ul class="nav nav-list">
+        <li><h4>Search</h4></li>
+</ul>
+<%= search_form_for @search, remote: true, url: {action: :cases}, html: {class: "form-horizontal search_form", id: "judges_cases"} do |f| %>
+  <div class="field">
+  <%causes = Cause.all.map{|cause| [cause.name+" - "+cause.category, cause.id]}%>
+    <%= f.select :cause_id_eq, options_for_select(causes), include_blank: "select Cause"%>
+
+  </div>
+ <div class="field">
+  <%= f.text_field :case_number_cont, placeholder: "Case number"%>
+  </div>
+  <div class="field">
+    <%= f.select :court_cont, Cause::COURTS, include_blank: "select Court"%>
+  </div>
+   <div class="field">
+  <%= f.text_field :year_of_judgement_eq, class: "datepicker", placeholder: "Date"%>
+  </div>
+  <div class="field">
+  <%= f.text_field :complainant_cont, placeholder: "Complainant"%>
+  </div>
+  <div class="field">
+  <%= f.text_field :defendant_cont, placeholder: "Defendant"%>
+  </div>
+  <div class="field">
+  <%= f.text_field :accused_cont, placeholder: "Accused"%>
+  </div>
+  <div class="action search_buttons">
+  <%= f.submit class: "btn btn-primary btn-block"%>
+
+  <%= link_to "clear", cases_judge_path(@judge), class: "btn btn-warning btn-block"%>
+  </div>
+
+<%end%>

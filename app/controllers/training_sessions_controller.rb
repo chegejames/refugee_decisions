@@ -5,11 +5,17 @@ class TrainingSessionsController < ApplicationController
   # GET /training_sessions.json
   def index
     @training = Training.find(params[:training_id])
-    @training_sessions = @training.training_sessions.group("date", "location").select(["location", "date"])
+    #@training_sessions = @training.training_sessions.group("date", "location").select(["location", "date"])
+    @search = @training.training_sessions.search(params[:q])
+    @training_sessions = @search.result.paginate(:page => params[:page], :per_page => 20).group("date", "location").select(["location", "date"])
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @training_sessions }
+    if request.xhr?
+        render :partial => 'training_sessions', :object => @training_sessions, :content_type => 'text/html'
+    else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @training_sessions }
+      end
     end
   end
 
@@ -43,7 +49,6 @@ class TrainingSessionsController < ApplicationController
 
   # POST /training_sessions
   # POST /training_sessions.json
-  #FIXME fix training to suit location
   def create
     @training = Training.find(params[:training_id])
     @training.create_training_sessions(params[:training_session][:date], params[:training_session][:judge_tokens], params[:training_session][:location])

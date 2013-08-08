@@ -18,21 +18,37 @@ class TrainingsController < ApplicationController
       format.html { redirect_to @training, notice: 'Training was successfully retracted.' }
     end
   end
+  #FIXME searching participants to pass params while submitting form
   def participants
     @training = Training.find(params[:id])
-    @date = params[:date]
-    @location = params[:location]
-    @training_sessions = @training.training_sessions.where(:date => params[:date], :location => params[:location])
+    if params[:q].blank?
+      @date = params[:date]
+      @location = params[:location]
+    else
+      @date = params[:q][:date]
+      @location = params[:q][:location]
+      params[:q].except!(:date, :location)
+    end
+    @search = @training.training_sessions.search(params[:q])
+    @training_sessions = @search.result.where(:date => @date, :location => @location)
     @judges = @training_sessions.map{|x| x.judge}
+    if request.xhr?
+        render :partial => 'participants', :object => @judges, :content_type => 'text/html'
+      else
+        respond_to do |format|
+        format.html
+        format.json { render json: @judges }
+      end
+      end
   end
 
   def index
     if user_signed_in?
       @search = Training.search(params[:q])
-      @trainings = @search.result.paginate(:page => params[:page], :per_page => 10).order("id ASC")
+      @trainings = @search.result.paginate(:page => params[:page], :per_page => 10).order("id DESC")
     else
       @search = Training.search(params[:q])
-      @trainings = @search.result.paginate(:page => params[:page], :per_page => 10).order("id ASC").publish?
+      @trainings = @search.result.paginate(:page => params[:page], :per_page => 10).order("id DESC").publish?
     end
     if request.xhr?
         render :partial => 'trainings', :object => @trainings, :content_type => 'text/html'
@@ -89,6 +105,7 @@ class TrainingsController < ApplicationController
 
   # PUT /trainings/1
   # PUT /trainings/1.json
+  #FIXME update loosing path to attachment
   def update
     @training = Training.find(params[:id])
 

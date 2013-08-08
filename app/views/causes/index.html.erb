@@ -1,27 +1,11 @@
-<h1>Listing causes</h1>
+<div class="row-fluid wrapper">
+<div class="span3" id="search">
+  <%= render "search"%>
+</div>
+<div class="span9" id="causes">
+<%= render "causes"%>
+</div>
+</div>
 
-<table class="table table-striped table-bordered table-hover table-condensed">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @causes.each do |cause| %>
-  <tr>
-    <td><%= cause.name %></td>
-    <td><%= cause.description.html_safe %></td>
-    <td><%= cause.category %></td>
-    <td><%= link_to 'Show', cause, class: "btn btn-mini btn-info" %></td>
-    <td><%= link_to 'Edit', edit_cause_path(cause), class: "btn btn-mini btn-warning" %></td>
-    <td><%= link_to 'Destroy', cause, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger"%></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
 
 

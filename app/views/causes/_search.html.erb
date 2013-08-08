@@ -1,0 +1,21 @@
+<ul class="nav nav-list">
+        <li><h4>Search</h4></li>
+</ul>
+<%= search_form_for @search, remote: true, html: {class: "form-horizontal search_form", id: "causes_search"} do |f| %>
+  <div class="field">
+  <%= f.text_field :name_cont, placeholder: "Cause name"%>
+  </div>
+   <div class="field">
+  <%= f.text_field :description_cont, placeholder: "Search phrase"%>
+  </div>
+  <div class="field">
+  <%= f.select :category_eq, Cause::CATEGORIES, include_blank: "select category"%>
+  </div>
+
+  <div class="action search_buttons">
+  <%= f.submit class: "btn btn-primary btn-block"%>
+
+  <%= link_to "clear", causes_path, class: "btn btn-warning btn-block"%>
+  </div>
+
+<%end%>

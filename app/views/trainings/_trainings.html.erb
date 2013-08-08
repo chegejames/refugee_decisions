@@ -12,6 +12,7 @@
   <%= image_tag "pdf.png"%>
   <%= link_to "download report", training.report.url%>
   </p>
+  <p class="pull-right">
   <% if can? :edit, training%>
     <%= link_to 'Show', training, class: "btn btn-mini btn-info"%>
     <%= link_to "Edit", edit_training_path(training), class: "btn btn-mini btn-warning"%>
@@ -23,6 +24,7 @@
 
     <%end%>
     <%end%>
+  </p>
   </article>
 <% end %>
 <br />

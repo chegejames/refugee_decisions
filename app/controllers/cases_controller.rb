@@ -43,14 +43,21 @@ class CasesController < ApplicationController
   # GET /cases/1/edit
   def edit
     @case = Case.find(params[:id])
+    @judge_params = @case.judge.id
+    @cause_params = @case.cause.id
   end
 
   # POST /cases
   # POST /cases.json
   def create
-    @judge = Judge.find(params[:case][:judge_id])
-    @cause = Cause.find(params[:case][:cause_id])
+    @judge = Judge.find_by_id(params[:case][:judge_id])
+    @cause = Cause.find_by_id(params[:case][:cause_id])
     @case = Case.new(params[:case].except(:judge_id, :cause_id))
+    @case.judge = @judge
+    @case.cause = @cause
+    @judge_params = params[:case][:judge_id].to_i
+    @cause_params = params[:case][:cause_id].to_i
+    @file = params[:case][:pdf]
 
     respond_to do |format|
       if @case.save
@@ -69,6 +76,7 @@ class CasesController < ApplicationController
   # PUT /cases/1.json
   def update
     @case = Case.find(params[:id])
+    @judge_params = @case.judge.id
 
     respond_to do |format|
       if @case.update_attributes(params[:case].except(:judge, :cause))

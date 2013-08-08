@@ -3,12 +3,17 @@ class CausesController < ApplicationController
   # GET /causes
   # GET /causes.json
   def index
-    @causes = Cause.all
+    @search = Cause.search(params[:q])
+    @causes = @search.result.paginate(:page => params[:page], :per_page => 20).order("id ASC")
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @causes }
-    end
+    if request.xhr?
+       render :partial => 'causes', :object => @causes, :content_type => 'text/html'
+     else
+       respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @causes }
+      end
+     end
   end
 
   # GET /causes/1

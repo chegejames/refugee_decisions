@@ -1,7 +1,12 @@
-<%= search_form_for @search, html: {class: "form-search"} do |f|%>
+<ul class="nav nav-list">
+        <li><h4>Search</h4></li>
+</ul>
+<%= search_form_for @search,  html: {class: "form-horizontal search_form"} do |f|%>
  <%= f.number_field :membership_id_eq, placeholder: "Membership ID"%>
  <%= f.select :designation_eq, Judge::DESIGNATIONS, include_blank: "#{'-'*10}Designation#{'-'*14}"%>
  <%= f.text_field :name_cont, placeholder: "Name"%>
- <%= f.submit "Search", class: "btn btn-primary"%>
-  <%= link_to "clear", judges_path, class: "btn btn-warning"%>
+<div class="action search_buttons">
+ <%= f.submit "Search", class: "btn btn-primary btn-block"%>
+  <%= link_to "clear", judges_path, class: "btn btn-warning btn-block"%>
+ </div>
 <%end%>

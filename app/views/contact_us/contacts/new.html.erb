@@ -1,27 +1,28 @@
 <div class="row-fluid">
 <h2><%= t('.contact_us') %></h2>
 <div class="span6" id="contact_us">
+<address>
 <p>
-	The KMJA Secretariat
+ <strong> The KMJA Secretariat</strong>
+    <p>
+  Milimani Law Courts,
     </p>
     <p>
-	Milimani Law Courts,
+  2nd Floor, Room 244
     </p>
     <p>
-	2nd Floor, Room 244
+  Tel: +254 (020) 3588237
     </p>
     <p>
-	Tel: +254 (020) 3588237
-    </p>
+  Email: <a href="mailto:#">admin@kmja.or.ke</a> <a href="mailto:#">kmjasec@yahoo.com</a>
+  </p>
     <p>
-	Email: admin@kmja.or.ke / kmjasec@yahoo.com
-	</p>
-    <p>
-	Website: <a href="http://www.kmja.or.ke" target="_blank">www.kmja.or.ke</a> 
-	</p>
+  Website: <a href="http://www.kmja.or.ke" target="_blank">www.kmja.or.ke</a>
+  </p>
+</address>
 </div>
 <div class="span5">
-	<%= form_for @contact, :url => contacts_path, :html => {:class => 'contact_form'} do |f| %>
+  <%= form_for @contact, :url => contacts_path, :html => {:class => 'contact_form'} do |f| %>
   <% if ContactUs.require_name %>
     <li class='string required' id='contact_us_contact_name_input'>
       <%= f.label :name, (t('.name') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
