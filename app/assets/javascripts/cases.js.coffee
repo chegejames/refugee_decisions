@@ -2,7 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ -> 
-     $("<img id=ajaxloader, src=assets/ajaxloader.gif/>").animate({"position": "absolute", "top":"40%", "left":"45%"}).hide().appendTo("document")
+     $("<img id=ajaxloader src=/assets/ajaxloader.gif />").hide().insertBefore("#main-content")
+     $("#ajaxloader").css({position: 'absolute', top: '45%',left: '45%'})
      $('#gallery a').fancybox({padding: 5, maxWidth: 600, minWidth:500,'type': 'image', openEffect  : 'elastic', })
      $('.datepicker').datepicker({ dateFormat: 'dd-mm-yy' })
      $('.dropdown-toggle').dropdown()
