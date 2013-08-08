@@ -39,6 +39,8 @@
 8/index.jpg: 8-d27b220d7c71f0b209979f173a071b86.jpg
 9.jpg: 9-ea9b3fa7830229889c93eb71c7464aab.jpg
 9/index.jpg: 9-ea9b3fa7830229889c93eb71c7464aab.jpg
+ajaxloader.gif: ajaxloader-fbb38dfc06887042ca54f154b00c9990.gif
+ajaxloader/index.gif: ajaxloader-fbb38dfc06887042ca54f154b00c9990.gif
 arms.jpg: arms-daa38bbadb4c50e046b449c6f30b9f04.jpg
 arms/index.jpg: arms-daa38bbadb4c50e046b449c6f30b9f04.jpg
 dpt.jpg: dpt-ec3c84aa044631420076cb929739a866.jpg
@@ -71,8 +73,8 @@ unhcr1.jpg: unhcr1-9a90d33f9121abc7da6d65ff8443ec98.jpg
 unhcr1/index.jpg: unhcr1-9a90d33f9121abc7da6d65ff8443ec98.jpg
 unhcr_logo.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
 unhcr_logo/index.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
-application.js: application-81aab07e7802c797e4976683aeb256dd.js
-application/index.js: application-81aab07e7802c797e4976683aeb256dd.js
+application.js: application-a94743955f75915eeffa1d83e5e3f625.js
+application/index.js: application-a94743955f75915eeffa1d83e5e3f625.js
 application.css: application-04b1a611a61e533cdb9c7f72880e9035.css
 application/index.css: application-04b1a611a61e533cdb9c7f72880e9035.css
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
