@@ -20,6 +20,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
+
 end
 gem "jquery-tokeninput-rails", "~> 1.6.0"
 gem 'jquery-rails'

@@ -5,6 +5,7 @@
     <%= display_meta_tags :site => 'Court decisions on refugee issues' %>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -13,7 +14,7 @@
     <% else%>
     <%= render 'layouts/main_nav'%>
     <%end%>
-    <div class="container-fluid" id="main-content">
+    <div  class="container-fluid" id="main-content">
       <% if notice.present?%>
       <span class="label label-success"><%= notice %></span>
       <%end%>

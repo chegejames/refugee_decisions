@@ -1,7 +1,7 @@
 <%if @trainings.empty?%>
-<span class="label label-warning">sorry no cases found</span>
+<span class="label label-warning">sorry no reports found</span>
 <%else%>
-<span class="label label-success"><%= pluralize(@trainings.count, 'training') %> found</span>
+<span class="label label-success"><%= pluralize(@trainings.count, 'report') %> found</span>
 <%end%>
 <% @trainings.each do |training| %>
   <article class="report">

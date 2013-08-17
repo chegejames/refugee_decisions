@@ -3,15 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap';
 @import "bootstrap-responsive";
+
+
 #logos{
   margin-bottom: none;
   background: #132530;
-  #kmja_logo{
-    img{
-      float: right;
-    }
-  }
-  h2{
+  h2, h4{
     color: #FF6600;
     text-align: center;
   }
@@ -21,35 +18,43 @@
     text-align: center;
   }
 }
-#main_nav{
-    background-color: #FF6600;
-    padding: 15px 25px;
-    box-shadow: 5px 5px 5px rgb(102, 102, 102);
+@media (min-width: 980px){
+       #main_nav{
+       background-color: #FF6600;
+       padding: 15px 25px;
+       box-shadow: 5px 5px 5px rgb(102, 102, 102);
      background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
     background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
      background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
      background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
-  ul{
-    margin-left: 25%;
-    list-style-type: none;
-    li{
-      margin-right: 5%;
-      display: inline;
-    a{
-      font-size: 1.2em;
-      font-family: Verdana,Geneva,sans-serif;
-      color: #132530;
-      text-shadow: #eee 0px 1px 0px;
-      font-style: bold;
-      &:hover{
-        
-        text-shadow:  #132530 0px 1px 0px;
-        color: #858687;
-        transition: all 1s;
-        text-decoration: none;
-      }
-    }
-    }
+    .navbar-inner{
+       border: none;
+       background-color: #FF6600;
+     background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+    background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+     background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+    background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);       
+     .container{
+          ul{
+	  margin-left: 25%;
+            li{
+              a{
+               font-size: 1.2em;
+	       font-family: Verdana,Geneva,sans-serif;
+	       color: #132530;
+	       text-shadow: #eee 0px 1px 0px;
+	       font-style: bold;
+               &:hover{
+	       text-shadow: #132530 0px 1px 0px;
+	       color: #858687;
+	       transition: all 1s;
+	       text-decoration: none;
+	       }
+              }
+            }
+          }
+        }
+     }
   }
 }
 #admin_nav{
@@ -69,18 +74,22 @@
       color: rgb(1, 135, 197);;
       text-align: center;
     }
-   #gallery, #arms, #flags{
-      padding: 0;
-     margin: 0;
-    img{
+   #myCarousel{
+         img{
       background: url('preloader.gif') no-repeat;
-       height: 150px;
-       width: 20%;
-       padding: 0;
-       margin: -2px;
-       border: none;
+             width: 640px;
+             height: 320px;
+
      }
-}   
+     
+    }
+    #objective{
+     -webkit-column-count: 3;
+-moz-column-count: 3;
+column-count: 3;
+text-indent: 2em;
+	     &:first-letter {
+font-weight: bold;}}   
     #flags, #arms{
       margin: 2px;
       img{

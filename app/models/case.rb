@@ -6,17 +6,26 @@ class Case < ActiveRecord::Base
   has_attached_file :pdf
 
   validates :year_of_judgement, :case_number, :court, :summary_of_decision, :pdf, presence: true
-  validates_presence_of :judge, :cause
+  validates_presence_of :judge
+  validates_presence_of :cause
 
- # validates :defendant, :complainant, presence: true, :if => :civil_case?
- # validates :state, :accused, presence: true, :if => :criminal_case?
+  validates :defendant, :complainant, presence: true, :if => :civil_case?
+  #validates :state, :accused, presence: true, :if => :criminal_case?
 
   def civil_case?
-    true
+    if cause_id.present?
+      Cause.find_by_id(cause_id).category == "civil"
+    else
+      return
+    end
   end
 
   def criminal_case?
-    true
+    if cause_id.present?
+      Cause.find_by_id(cause_id).category == "criminal"
+     else
+      return
+    end
   end
 
   COURTS = ['Supreme court',
