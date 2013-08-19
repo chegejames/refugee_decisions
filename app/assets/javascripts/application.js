@@ -22,4 +22,5 @@
 //= require cases
 //= require jquery.tokeninput
 //= require turbolinks
+//= require_tree .
 

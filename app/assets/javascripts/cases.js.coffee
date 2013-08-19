@@ -8,6 +8,7 @@ $ ->
      $('.datepicker').datepicker({ dateFormat: 'dd-mm-yy' })
      $('.dropdown-toggle').dropdown()
      $('.carousel').carousel()
+     $('#carousel').elastislide()
      $('#criminal, #civil').hide()
      if $('#case_cause_id option:selected').text().indexOf('civil') > -1 then $('#civil').show() else  $('#criminal').show()
      $('#case_cause_id').change(-> if $('#case_cause_id option:selected')
