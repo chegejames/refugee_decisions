@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ -> 
      $("<img id=ajaxloader src=/assets/ajaxloader.gif />").hide().insertBefore("#main-content")
-     $("#ajaxloader").css({position: 'absolute', top: '45%',left: '45%'})
+     $("#ajaxloader").css({position: 'absolute', top: '45%',left: '45%', 'z-index': '100'})
      $('.datepicker').datepicker({ dateFormat: 'dd-mm-yy' })
      $('.dropdown-toggle').dropdown()
      $('.carousel').carousel()
