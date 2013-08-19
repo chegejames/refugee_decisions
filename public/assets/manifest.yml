@@ -85,8 +85,8 @@ unhcr_logo.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
 unhcr_logo/index.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
 application.js: application-0e8dbd91df823668b9959d641cb9275f.js
 application/index.js: application-0e8dbd91df823668b9959d641cb9275f.js
-application.css: application-88b10db66bd3b9173de99f03c40036e4.css
-application/index.css: application-88b10db66bd3b9173de99f03c40036e4.css
+application.css: application-6696f3fdfa755af8a833eff3abfba40a.css
+application/index.css: application-6696f3fdfa755af8a833eff3abfba40a.css
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd/index.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-hd-074c2e3e6aa41e21f31e4cc09c385082.png
 jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-sd.png: jquery.mobile-1.3.1/demos/_assets/css/jqm_demo-icons-sd-0d589aa7db0edb179d5118ea3490b07d.png
