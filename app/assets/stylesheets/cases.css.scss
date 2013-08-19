@@ -79,14 +79,13 @@
        }
    }
    #myCarousel{
-        margin-top: -10px;
         padding: 0px;
 	background: url('preloader.gif') no-repeat;
         background-position: 50% 50%;
          img{
              display: inline;
              width: 50%;
-             height: 45%;
+             height: 260px;
              padding: .5px;
              -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */

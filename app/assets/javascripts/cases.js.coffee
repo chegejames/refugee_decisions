@@ -4,11 +4,9 @@
 $ -> 
      $("<img id=ajaxloader src=/assets/ajaxloader.gif />").hide().insertBefore("#main-content")
      $("#ajaxloader").css({position: 'absolute', top: '45%',left: '45%'})
-     $('#gallery a').fancybox({padding: 5, maxWidth: 600, minWidth:500,'type': 'image', openEffect  : 'elastic', })
      $('.datepicker').datepicker({ dateFormat: 'dd-mm-yy' })
      $('.dropdown-toggle').dropdown()
      $('.carousel').carousel()
-     $('#carousel').elastislide()
      $('#criminal, #civil').hide()
      if $('#case_cause_id option:selected').text().indexOf('civil') > -1 then $('#civil').show() else  $('#criminal').show()
      $('#case_cause_id').change(-> if $('#case_cause_id option:selected')
