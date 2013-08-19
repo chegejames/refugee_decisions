@@ -2,9 +2,15 @@
         <li><h4>Search</h4></li>
 </ul>
 <%= search_form_for @search,  html: {class: "form-horizontal search_form"} do |f|%>
+<div class="field">
  <%= f.number_field :membership_id_eq, placeholder: "Membership ID"%>
+</div>
+<div class="field">
  <%= f.select :designation_eq, Judge::DESIGNATIONS, include_blank: "#{'-'*10}Designation#{'-'*14}"%>
+</div>
+<div class="field">
  <%= f.text_field :name_cont, placeholder: "Name"%>
+</div>
 <div class="action search_buttons">
  <%= f.submit "Search", class: "btn btn-primary btn-block"%>
   <%= link_to "clear", judges_path, class: "btn btn-warning btn-block"%>

@@ -16,7 +16,7 @@
     <p class="span4"><span>Court:</span> <%= cases.court %></p>
     </article>
     <p><span>Cause:</span> <%= cases.cause.name + " - " + cases.cause.category%></p>
-    <p><span>Judge:</span><%= cases.judge.name%></p>
+    <p><span>Judge:</span> <%= "#{cases.judge.designation + " " + cases.judge.name}"%></p>
     <p><%= truncate(cases.summary_of_decision, length: 200).html_safe %></p>
      <p class="pull-right">
     <%if can? :create, Case%>

@@ -183,14 +183,16 @@ font-weight: bold;}}
     }
     #search{
      
-       
          .search_form{
      	  margin-left: 5%;
            input, select{
              margin-bottom: 10px;
             }
+           -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
       .search_buttons{
-       
+           width: 220px;
       }
     }
        }

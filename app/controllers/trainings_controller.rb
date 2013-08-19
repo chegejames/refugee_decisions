@@ -18,7 +18,7 @@ class TrainingsController < ApplicationController
       format.html { redirect_to @training, notice: 'Training was successfully retracted.' }
     end
   end
-  #FIXME searching participants to pass params while submitting form
+
   def participants
     @training = Training.find(params[:id])
     if params[:q].blank?

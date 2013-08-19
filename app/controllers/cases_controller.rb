@@ -4,7 +4,7 @@ class CasesController < ApplicationController
   # GET /cases
   # GET /cases.json
   def index
-    @search = Case.search(params[:q])
+    @search = Case.includes(:judge, :cause).search(params[:q])
     @cases = @search.result.paginate(:page => params[:page], :per_page => 10).order("id ASC")
     if request.xhr?
     render :partial => 'cases', :object => @cases, :content_type => 'text/html'
@@ -19,7 +19,7 @@ class CasesController < ApplicationController
   # GET /cases/1
   # GET /cases/1.json
   def show
-    @case = Case.find(params[:id])
+    @case = Case.includes(:judge, :cause).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
