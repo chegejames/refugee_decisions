@@ -56,15 +56,11 @@ gem 'ransack'
 
 gem 'social-share-button'
 
-gem 'mobile-fu'
-
 gem 'contact_us', '~> 0.4.0'
 
 gem "devise"
 
 gem 'cancan'
-
-gem 'fancybox2-rails', '~> 0.2.4'
 
 gem 'turbolinks'
 
