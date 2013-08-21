@@ -15,8 +15,7 @@
 //= require jquery_ujs
 //= require jquery.ui.datepicker
 //= require ckeditor/init
-//= require bootstrap-carousel
-//= require bootstrap-dropdown
+//= require bootstrap
 //= require social-share-button
 //= require vendor
 //= require cases

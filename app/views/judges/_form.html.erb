@@ -1,3 +1,4 @@
+<%set_meta_tags :nofollow => true%>
 <%= form_for(@judge) do |f| %>
   <% if @judge.errors.any? %>
     <div id="error_explanation">
@@ -20,7 +21,7 @@
     <%= f.number_field :membership_id, required: true%>
  </div>
    <div class="field">
-     <%= f.label :desigantion%>
+     <%= f.label :designation%>
      <%= f.select :designation, Judge::DESIGNATIONS, include_blank: "Designation", required: true%>
    </div>
 

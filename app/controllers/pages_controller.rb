@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  #FIXME add spinner for ajax and turbolinks
+
   def home
   end
 

@@ -1,3 +1,4 @@
+<%set_meta_tags :nofollow => true%>
 <ul class="nav nav-list">
         <li><h4>Search</h4></li>
 </ul>
@@ -6,7 +7,10 @@
   <%= f.text_field :location_cont, placeholder: "Training location"%>
   </div>
    <div class="field">
-  <%= f.text_field :date_eq, class: "datepicker", placeholder: "Date"%>
+  <%= f.text_field :start_date_eq, class: "datepicker", placeholder: "Date"%>
+  </div>
+  <div class="field">
+  <%= f.text_field :end_date_eq, class: "datepicker", placeholder: "Date"%>
   </div>
 
   <div class="action search_buttons">

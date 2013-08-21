@@ -7,11 +7,11 @@ class Training < ActiveRecord::Base
   validates :name, :date, :remarks, :report, presence: :true
   scope :publish?, where(:publish => true)
 
-  def create_training_sessions(trained_on, judges_tokens, location)
+  def create_training_sessions(start_date, end_date, judges_tokens, location)
     training = self
     judges= Judge.find(judges_tokens.split(","))
     judges.each do |judge|
-      training.training_sessions.create(:judge_id => judge.id, :date => trained_on, :location => location)
+      training.training_sessions.create!(:judge_id => judge.id, :start_date => start_date, :end_date => end_date, :location => location)
     end
   end
 

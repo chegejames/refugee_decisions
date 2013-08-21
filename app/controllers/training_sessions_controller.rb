@@ -7,7 +7,7 @@ class TrainingSessionsController < ApplicationController
     @training = Training.find(params[:training_id])
     #@training_sessions = @training.training_sessions.group("date", "location").select(["location", "date"])
     @search = @training.training_sessions.search(params[:q])
-    @training_sessions = @search.result.paginate(:page => params[:page], :per_page => 20).group("date", "location").select(["location", "date"])
+    @training_sessions = @search.result.paginate(:page => params[:page], :per_page => 20).group("start_date", "end_date", "location").select(["start_date", "location", "end_date"])
 
     if request.xhr?
         render :partial => 'training_sessions', :object => @training_sessions, :content_type => 'text/html'
@@ -51,7 +51,7 @@ class TrainingSessionsController < ApplicationController
   # POST /training_sessions.json
   def create
     @training = Training.find(params[:training_id])
-    @training.create_training_sessions(params[:training_session][:date], params[:training_session][:judge_tokens], params[:training_session][:location])
+    @training.create_training_sessions(params[:training_session][:start_date], params[:training_session][:end_date], params[:training_session][:judge_tokens], params[:training_session][:location])
     @training_session = TrainingSession.new(params[:training_session].except(:judge, :training))
 
     respond_to do |format|

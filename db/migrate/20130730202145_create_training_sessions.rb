@@ -3,7 +3,8 @@ class CreateTrainingSessions < ActiveRecord::Migration
     create_table :training_sessions do |t|
       t.references :judge
       t.references :training
-      t.date :date
+      t.date :start_date
+      t.date :end_date
       t.string :location
 
       t.timestamps

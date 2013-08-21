@@ -1,5 +1,5 @@
 <ul class="breadcrumb">
-        <li><%= link_to "#{@training.name} held at: #{@location + " Date: " +@date}", training_training_sessions_path(@training)%> <span class="divider">/</span></li>
+        <li><%= link_to "#{@training.name} held at: #{@location + " Date: " +@start_date}", training_training_sessions_path(@training)%> <span class="divider">/</span></li>
     <li class="active">Participants</li>
 </ul>
 <%if @judges.empty?%>

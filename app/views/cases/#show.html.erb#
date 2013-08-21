@@ -1,0 +1,53 @@
+
+<ul class="breadcrumb">
+		<li>
+			<%= link_to "Judgmnents", cases_path%> <span class="divider">/</span>
+		</li>
+		<li class="active">
+			<% if @case.cause.category == "criminal"%>
+			<%= @case.state.upcase %> vs. <%= @case.accused.upcase %>
+			<%else%>
+			<%= @case.complainant.upcase %> vs. <%= @case.defendant.upcase %>
+			<%end%>
+		</li>
+	</ul>
+	<div class="row-fluid">
+	<div class="span12" id="judgement">
+		
+		<%= social_share_button_tag( @case.summary_of_decision.html_safe , :image => 'assets/kmja_logo.png', :'data-type' => 'photo' )%>
+		<% if @case.cause.category == "criminal"%>
+		<h3><%= @case.state.upcase %> vs. <%= @case.accused.upcase %></h3>
+		<%else%>
+		<h3><%= @case.complainant.upcase %> vs. <%= @case.defendant.upcase %></h3>
+		<%end%>
+		<article class="row-fluid">
+			<p class="span4">
+				<span>Case Number:</span> <%= @case.case_number %>
+			</p>
+			<p class="span4">
+				<span>Delivery Date:</span> <%= @case.year_of_judgement %>
+			</p>
+			<p class="span4">
+				<span>Court:</span> <%= @case.court %>
+			</p>
+		</article>
+		<p>
+			<span>Cause:</span><%= @case.cause.name + " - " + @case.cause.category%>
+		</p>
+		<p>
+			<span>Judge:</span><%= @case.judge.name%>
+		</p>
+
+		<p>
+			<%= @case.summary_of_decision.html_safe %>
+		</p>
+		<p>
+			<%= image_tag "pdf.png"%>
+			<%= link_to "download full judgement", @case.pdf.url%>
+		</p>
+		<% if can? :edit, Case %>
+		<%= link_to 'Edit', edit_case_path(@case), class: "btn" %> |
+		<%= link_to 'Back', cases_path, class: "btn"%>
+		<%end%>
+	</div>
+</div>

@@ -70,7 +70,8 @@ ActiveRecord::Schema.define(:version => 20130730202145) do
   create_table "training_sessions", :force => true do |t|
     t.integer  "judge_id"
     t.integer  "training_id"
-    t.date     "date"
+    t.date     "start_date"
+    t.date     "end_date"
     t.string   "location"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

@@ -22,15 +22,17 @@ class TrainingsController < ApplicationController
   def participants
     @training = Training.find(params[:id])
     if params[:q].blank?
-      @date = params[:date]
+      @start_date = params[:start_date]
+      @end_date = params[:end_date]
       @location = params[:location]
     else
-      @date = params[:q][:date]
+      @start_date = params[:q][:start_date]
+      @end_date = params[:q][:end_date]
       @location = params[:q][:location]
-      params[:q].except!(:date, :location)
+      params[:q].except!(:end_date, :start_date, :location)
     end
     @search = @training.training_sessions.search(params[:q])
-    @training_sessions = @search.result.where(:date => @date, :location => @location)
+    @training_sessions = @search.result.where(:start_date => @start_date, :end_date => @end_date, :location => @location)
     @judges = @training_sessions.map{|x| x.judge}
     if request.xhr?
         render :partial => 'participants', :object => @judges, :content_type => 'text/html'
@@ -81,7 +83,7 @@ class TrainingsController < ApplicationController
       format.json { render json: @training }
     end
   end
-
+  #FIXME training report on editing
   # GET /trainings/1/edit
   def edit
     @training = Training.find(params[:id])
@@ -105,7 +107,7 @@ class TrainingsController < ApplicationController
 
   # PUT /trainings/1
   # PUT /trainings/1.json
-  #FIXME update loosing path to attachment
+
   def update
     @training = Training.find(params[:id])
 
