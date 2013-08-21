@@ -1,5 +1,5 @@
 <%set_meta_tags :nofollow => true%>
-<%= form_for(@training, remote: true) do |f| %>
+<%= form_for(@training) do |f| %>
   <% if @training.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@training.errors.count, "error") %> prohibited this training from being saved:</h2>
@@ -26,7 +26,7 @@
   </div>
    <div class="field">
     <%= f.label :upload_report%></br>
-    <%= f.file_field :report, required: true%>
+    <%= f.file_field :report%>
   </div>
 
   <div class="actions">
