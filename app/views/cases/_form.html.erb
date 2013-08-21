@@ -14,7 +14,7 @@
 
  <div class="field">
     <%= f.label :judge_id%><br />
-    <%= f.select :judge_id, options_from_collection_for_select(Judge.all, :id, :name, @judge_params), include_blank: "#{"-"*8}Select cause#{"-"*8}"  %>
+    <%= f.select :judge_id, options_from_collection_for_select(Judge.all, :id, :name, @judge_params), include_blank: "#{"-"*8}Select judge#{"-"*8}"  %>
  <div class="field">
     <%= f.label :cause %><br />
     <%causes = Cause.all.map{|cause| [cause.name+" - "+cause.category, cause.id]}%>

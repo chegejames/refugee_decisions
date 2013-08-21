@@ -5,7 +5,7 @@ class CasesController < ApplicationController
   # GET /cases.json
   def index
     @search = Case.includes(:judge, :cause).search(params[:q])
-    @cases = @search.result.paginate(:page => params[:page], :per_page => 10).order("id ASC")
+    @cases = @search.result.paginate(:page => params[:page], :per_page => 10).order("id DESC")
     if request.xhr?
     render :partial => 'cases', :object => @cases, :content_type => 'text/html'
       else
