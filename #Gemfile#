@@ -5,8 +5,8 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
+#gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -19,9 +19,13 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-end
 
+
+end
+gem "jquery-tokeninput-rails", "~> 1.6.0"
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -42,7 +46,32 @@ gem "ckeditor"
 
 gem "paperclip"
 
-gem 'will_paginate'
-
 gem 'bootstrap-sass'
 
+gem 'bootstrap-will_paginate'
+
+gem 'unicorn'
+
+gem 'ransack'
+
+gem 'social-share-button'
+
+gem 'contact_us', '~> 0.4.0'
+
+gem "devise"
+
+gem 'cancan'
+
+gem 'turbolinks'
+
+gem 'jquery-turbolinks'
+
+gem 'meta-tags', :require => 'meta_tags'
+
+gem "ransack"
+
+gem "brakeman"
+
+gem "nokogiri"
+
+gem "mechanize"

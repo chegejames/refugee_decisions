@@ -73,3 +73,6 @@ gem "ransack"
 
 gem "brakeman"
 
+gem "nokogiri"
+
+gem "mechanize"
