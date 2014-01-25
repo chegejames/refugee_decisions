@@ -6,9 +6,9 @@
 <% @cases.each do |cases| %>
   <article class="case">
     <% if cases.cause.category == "criminal"%>
-     <h3><%= cases.state.upcase %> vs. <%= cases.accused.upcase %></h3>
+     <h4><%= cases.state.upcase %> vs. <%= cases.accused.upcase %></h4>
     <%else%>
-     <h3><%= cases.complainant.upcase %> vs. <%= cases.defendant.upcase %></h3>
+     <h4><%= cases.complainant.upcase %> vs. <%= cases.defendant.upcase %></h4>
     <%end%>
     <article class="row-fluid">
     <p class="span4"><span>Case Number:</span> <%= cases.case_number %></p>
