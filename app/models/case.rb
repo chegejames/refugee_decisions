@@ -1,7 +1,7 @@
 class Case < ActiveRecord::Base
   belongs_to :judge
   belongs_to :cause
-  attr_accessible :judge_id, :cause_id, :accused, :case_number, :complainant, :court, :defendant, :state, :summary_of_decision, :year_of_judgement, :pdf
+  attr_accessible :judge_id, :cause_id, :accused, :case_number, :complainant, :court, :defendant, :state, :summary_of_decision, :year_of_judgement, :pdf, :source
 
   has_attached_file :pdf
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730202145) do
+ActiveRecord::Schema.define(:version => 20140211081445) do
 
   create_table "cases", :force => true do |t|
     t.integer  "judge_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130730202145) do
     t.datetime "pdf_updated_at"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.string   "source"
   end
 
   add_index "cases", ["cause_id"], :name => "index_cases_on_cause_id"

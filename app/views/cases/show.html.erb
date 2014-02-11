@@ -1,6 +1,6 @@
   <ul class="breadcrumb">
     <li>
-      <%= link_to "Judgmnents", cases_path%> <span class="divider">/</span>
+      <%= link_to "Judgments", cases_path%> <span class="divider">/</span>
     </li>
     <li class="active">
       <% if @case.cause.category == "criminal"%>
@@ -12,8 +12,16 @@
   </ul>
   <div class="row-fluid">
   <div class="span12" id="judgement">
-
+    <span class="span12">
+    <span class="span8">
     <%= social_share_button_tag( @case.summary_of_decision.html_safe , :image => 'assets/kmja_logo.png', :'data-type' => 'photo' )%>
+   </span>
+   <span class="span4">
+    <p>
+      <span>Source: </span><%= @case.source%>
+    </p>
+    </span>
+    </span>
     <% if @case.cause.category == "criminal"%>
     <h4><%= @case.state.upcase %> vs. <%= @case.accused.upcase %></h4>
     <%else%>
