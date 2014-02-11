@@ -6,9 +6,11 @@
 <% @cases.each do |cases| %>
 
   <article class="case">
+      <% if case.source.present?%>
      <section class="row-fluid">
       <p class="offset8"><span>Source:</span> <%= cases.source %></p>
     </section>
+     <%end%>
     <% if cases.cause.category == "criminal"%>
      <h4><%= cases.state.upcase %> vs. <%= cases.accused.upcase %></h4>
     <%else%>
