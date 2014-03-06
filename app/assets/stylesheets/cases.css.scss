@@ -143,7 +143,7 @@ column-count: 2;
         font-family: "Lucida Grande",Arial,Helvetica,Verdana,sans-serif;
         color: rgb(27, 27, 27);
         border-bottom: 1px inset rgb(204, 204, 204);
-        h3{
+        h3, h4, h5{
           text-align: center;
         }
         p{
@@ -151,6 +151,9 @@ column-count: 2;
             color: rgb(1, 135, 197);
           }
         }
+	.truncate{
+	   color: rgb(0,0,0);
+	}
     }
 
     #cases{
@@ -166,10 +169,13 @@ column-count: 2;
         background: none repeat scroll 0% 0% rgb(245, 245, 245);
         border-bottom: 1px solid  rgb(204, 204, 204);
         border-top: 1px solid  rgb(204, 204, 204);
-      }
-        h3{
+        }
+        h3, h4, h5{
           text-align: center;
         }
+	.truncate{
+	color: rgb(0,0,0);
+	}
         p{
           span{
             color: rgb(1, 135, 197);

@@ -23,7 +23,7 @@
     </article>
     <p><span>Cause:</span> <%= cases.cause.name + " - " + cases.cause.category%></p>
     <p><span>Judge:</span> <%= "#{cases.judge.designation + " " + cases.judge.name}"%></p>
-    <p><%= truncate(cases.summary_of_decision, length: 200).html_safe %></p>
+    <div class="truncate"><%= truncate(cases.summary_of_decision, length: 200).html_safe %></div>
      <p class="pull-right">
     <%if can? :create, Case%>
     <%= link_to "Edit", edit_case_path(cases), class: "btn btn-warning btn-mini" %>

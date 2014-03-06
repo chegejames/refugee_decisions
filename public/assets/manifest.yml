@@ -71,8 +71,8 @@ unhcr_logo.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
 unhcr_logo/index.png: unhcr_logo-eff57142aa2e18d80513d7620c7e425b.png
 application.js: application-dd405d855287b0876a2b189693ceec75.js
 application/index.js: application-dd405d855287b0876a2b189693ceec75.js
-application.css: application-73e5b5ce14a4f26e3c3f61c0942205d4.css
-application/index.css: application-73e5b5ce14a4f26e3c3f61c0942205d4.css
+application.css: application-3cfd1f1cedc391252404faa4fa9065ef.css
+application/index.css: application-3cfd1f1cedc391252404faa4fa9065ef.css
 sprites/social-share-button.png: sprites/social-share-button-bb0b1f00a0d029defa92288b6714a398.png
 sprites/social-share-button/index.png: sprites/social-share-button-bb0b1f00a0d029defa92288b6714a398.png
 sprites/social-share-button@2x.png: sprites/social-share-button@2x-1cb8d74004b16e83da214d6f8eeabd99.png

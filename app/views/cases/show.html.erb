@@ -47,9 +47,9 @@
       <span>Judge:</span><%= @case.judge.name%>
     </p>
 
-    <p>
+    <div class="truncate">
       <%= @case.summary_of_decision.html_safe %>
-    </p>
+    </div>
     <p>
       <%= image_tag "pdf.png"%>
       <%= link_to "download full judgement", @case.pdf.url%>

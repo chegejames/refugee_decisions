@@ -76,3 +76,5 @@ gem "brakeman"
 gem "nokogiri"
 
 gem "mechanize"
+
+gem 'aws-sdk'
