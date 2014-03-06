@@ -2,7 +2,13 @@ class Training < ActiveRecord::Base
   attr_accessible :name, :date, :remarks, :report, :publish
   has_many :training_sessions, dependent: :destroy
   has_many :judges, :through => :training_sessions
-  has_attached_file :report
+  has_attached_file :report,
+   :storage => :s3,
+    :bucket => 'KMJA',
+    :s3_credentials => {
+      :access_key_id => 'AKIAIYFZI4LE3PC2MXKQ',
+      :secret_access_key => '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'
+    }
 
   validates :name, :date, :remarks, :report, presence: :true
   scope :publish?, where(:publish => true)
