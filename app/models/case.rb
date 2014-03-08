@@ -3,13 +3,8 @@ class Case < ActiveRecord::Base
   belongs_to :cause
   attr_accessible :judge_id, :cause_id, :accused, :case_number, :complainant, :court, :defendant, :state, :summary_of_decision, :year_of_judgement, :pdf, :source
 
-  has_attached_file :pdf,
-  :storage => :s3,
-    :bucket => 'KMJA',
-    :s3_credentials => {
-      :access_key_id => 'AKIAIXBRNLDAN622OIQQ',
-      :secret_access_key => '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'
-    }
+  has_attached_file :pdf
+
 
   validates :year_of_judgement, :case_number, :court, :summary_of_decision, :pdf, presence: true
   validates_presence_of :judge
