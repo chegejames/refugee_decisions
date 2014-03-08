@@ -6,8 +6,8 @@ class Training < ActiveRecord::Base
    :storage => :s3,
     :bucket => 'KMJA',
     :s3_credentials => {
-      :access_key_id => 'AKIAIYFZI4LE3PC2MXKQ',
-      :secret_access_key => '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'
+      :access_key_id => 'AKIAIXBRNLDAN622OIQQ',
+      :secret_access_key => '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'
     }
 
   validates :name, :date, :remarks, :report, presence: :true

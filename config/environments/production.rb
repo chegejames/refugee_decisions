@@ -68,8 +68,8 @@ Unhcrkmja::Application.configure do
   :storage => :s3,
   :s3_credentials => {
     :bucket => ENV['KMJA'],
-    :access_key_id => ENV['AKIAIYFZI4LE3PC2MXKQ'],
-    :secret_access_key => ENV['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']
+    :access_key_id => ENV['AKIAIXBRNLDAN622OIQQ'],
+    :secret_access_key => ENV['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']
   }
 }
 end
