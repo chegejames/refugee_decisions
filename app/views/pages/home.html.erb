@@ -20,8 +20,8 @@
    <div class="item"><%= image_tag("11.jpg")%><%= image_tag("20.jpg")%></div>
    <div class="item"><%= image_tag("14.jpg")%><%= image_tag("17.jpg")%></div>
    <div class="item"><%= image_tag("16.jpg")%><%= image_tag("15.jpg")%></div>
-   <div class="item"><%= image_tag("21.jpg")%><%= image_tag("22.jpg")%></div>
-   <div class="item"><%= image_tag("23.jpg")%><%= image_tag("24.jpg")%></div>
+   <div class="item"><%= image_tag("21.jpg")%><%= image_tag("24.jpg")%></div>
+   <div class="item"><%= image_tag("22.jpg")%><%= image_tag("23.jpg")%></div>
 
 
 
@@ -36,7 +36,7 @@
 </div>
 <div class="row-fluid">
   <div class="span3 news content">
-   <h3>News</h3>
+   <h3>Latest News &amp; events</h3>
    <%= render "news/index"%>
   </div>
   <div class="span7 content">
@@ -76,6 +76,9 @@ The system is meant to keep records of decisions made by the Judiciary involving
   </p>
     <p>
   Website: <a href="http://www.kmja.or.ke" target="_blank">www.kmja.or.ke</a>
+    </p>
+   <p>
+  <%= link_to image_tag("twitter.png", size: "50x50"), "https://twitter.com/KMJA_KENYA", :target => "_blank"%>
   </p>
 </address>
   </div>
