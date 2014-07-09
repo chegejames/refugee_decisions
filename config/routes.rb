@@ -2,6 +2,9 @@ Unhcrkmja::Application.routes.draw do
 
 
 
+  resources :news
+
+
   devise_for :users
 
   mount Ckeditor::Engine => '/ckeditor'

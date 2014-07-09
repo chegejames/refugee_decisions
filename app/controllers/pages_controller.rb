@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @news = News.all
   end
 
   def about_us
