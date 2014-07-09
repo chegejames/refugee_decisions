@@ -7,9 +7,9 @@
 
 #logos{
   margin-bottom: none;
-  background: #132530;
+  background: #80827E;
   h2, h4{
-    color: #FF6600;
+    color:  #3B5998;
     text-align: center;
   }
   h5{
@@ -20,20 +20,20 @@
 }
 @media (min-width: 980px){
        #main_nav{
-       background-color: #FF6600;
+       background-color: #3B5998;
        padding: 15px 25px;
        box-shadow: 5px 5px 5px rgb(102, 102, 102);
-     background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
-    background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
-     background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
-     background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+       background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+       background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+       background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+       background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
     .navbar-inner{
        border: none;
-       background-color: #FF6600;
-     background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
-    background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
-     background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
-    background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);       
+       background-color: #3B5998;
+       background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+       background-image: -moz-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+       background-image: -o-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);
+       background-image: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 55%);       
      .container{
           ul{
 	  margin-left: 25%;
@@ -41,12 +41,9 @@
               a{
                font-size: 1.5em;
 	       font-family: Verdana,Geneva,sans-serif;
-	       color: #132530;
-	       text-shadow: #eee 0px 1px 0px;
-	       font-style: bold;
+	       color: #FFFFFF;
                &:hover{
-	       text-shadow: #132530 0px 1px 0px;
-	       color: #858687;
+	       color: #80827E;
 	       transition: all 1s;
 	       text-decoration: none;
 	       }
